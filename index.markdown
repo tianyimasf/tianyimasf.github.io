@@ -2,9 +2,10 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: home
+nav_order: 1
 ---
 
-### _**Simple JS Image Classifiers**_
+### _**JS Image Classifiers**_
 
 Linked below & on the left are some examples of vision classifiers using JavaScript from my time taking the [fast.ai](https://course.fast.ai) course [practical deep learning for coders](https://course.fast.ai/).
 
