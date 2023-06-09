@@ -1,0 +1,73 @@
+---
+title: Fungi Classification Leveled Up! 280 Species
+layout: page
+---
+
+<p>
+  To start, simply push the button to randomly generate one of the mushroom
+  species and its picture, or search for a mushroom picture with one of
+  <a
+    href="https://huggingface.co/spaces/tymasf/fungi-classification-280-species/blob/main/vocab.txt"
+    >the 280 species</a
+  >
+</p>
+<button id="btn-get-mushroom">Get me some mushroom</button>
+<input id="photo" type="file" />
+<div id="results"></div>
+<script>
+  async function loaded(image = null, species = "", reader = null) {
+    let img_data = image;
+    if (image == null) {
+      img_data = reader.result;
+    }
+    const response = await fetch(
+      "https://tymasf-fungi-classification-280-species.hf.space/api/predict/",
+      {
+        method: "POST",
+        body: JSON.stringify({
+          data: [img_data],
+          fn_index: 2,
+        }),
+        headers: { "Content-Type": "application/json" },
+      }
+    );
+    const json = await response.json();
+    console.log(json);
+    const top5 = json["data"][0]["confidences"];
+    results.innerHTML = `<br/><img src="${img_data}" width="300"> <p>
+      Top 5 results and their confidence:<br/> 
+        ${top5[0]["label"]}: ${top5[0]["confidence"]}<br/>
+        ${top5[1]["label"]}: ${top5[1]["confidence"]}<br/>
+        ${top5[2]["label"]}: ${top5[2]["confidence"]}<br/>
+        ${top5[3]["label"]}: ${top5[3]["confidence"]}<br/>
+        ${top5[4]["label"]}: ${top5[4]["confidence"]}<br/></p>`;
+
+    if (species != "") {
+      results.innerHTML += `<p><br/>This is ${species}. </p>`;
+    }
+  }
+  function read() {
+    const reader = new FileReader();
+    reader.addEventListener("load", () => loaded(null, "", reader));
+    reader.readAsDataURL(photo.files[0]);
+  }
+  photo.addEventListener("input", read);
+
+  async function getPictureAndPredict() {
+    const response = await fetch(
+      "https://tymasf-fungi-classification-280-species.hf.space/api/predict/",
+      {
+        method: "POST",
+        body: JSON.stringify({ data: [], fn_index: 0 }),
+        headers: { "Content-Type": "application/json" },
+      }
+    );
+    const json = await response.json();
+    const image = json["data"][0];
+    const species = json["data"][1];
+    loaded(image, species);
+  }
+  document
+    .getElementById("btn-get-mushroom")
+    .addEventListener("click", getPictureAndPredict);
+</script>
