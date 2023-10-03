@@ -1,8 +1,8 @@
 ---
 title: Real Disaster Tweets Classification
 tags: [NLP, Transformer, multi-head attention mechanism]
-style: fill
-color: light
+style: border
+color: primary
 description:
   A tutorial to understand multi-head attention mechanism behind the Transformer architecture.
   Classify if a tweet is really reporting a disaster or not using pre-trianed model.
@@ -16,7 +16,7 @@ The ubiquitousness of smartphones enables people to announce an emergency they�
 
 But, it’s not always clear whether a person’s words are actually announcing a disaster. Take this example:
 
-![fake disaster tweet](../images/fake_disaster_tweet.png)
+![fake disaster tweet](../assets/images/fake_disaster_tweet.png)
 
 The author explicitly uses the word “ABLAZE” but means it metaphorically. This is clear to a human right away, especially with the visual aid. But it’s less clear to a machine.
 
@@ -42,7 +42,7 @@ The main idea of Query, Key and Value is drawn from informtation retrieval. For 
 
 ### Self-attention in the Encoder
 
-First, each input sequence is converted to an input embedding and a positional embedding. Combining these two embeddings creates a vector representation of the sequence that captures the semantic and positional meaning of the sequence. Then, this vector representation is fed into all three of the attention parameter matrices, Query, Key and Value for the first self-attention block -- $W_q, W_k, and W_v$, and produces a new encoded representation which now incorporates the attention scores of the first self-attention block for each word in the sequence. Passing through the rest of the self-attention blocks in the Encoder, each of the blocks adds their own attention scores for each words as well.
+First, each input sequence is converted to an input embedding and a positional embedding. Combining these two embeddings creates a vector representation of the sequence that captures the semantic and positional meaning of the sequence. Then, this vector representation is fed into all three of the attention parameter matrices, Query, Key and Value for the first self-attention block -- $W_{q}$, $W_{k}$ and $W_{v}$, and produces a new encoded representation which now incorporates the attention scores of the first self-attention block for each word in the sequence. Passing through the rest of the self-attention blocks in the Encoder, each of the blocks adds their own attention scores for each words as well.
 
 ### Self-attention in the Decoder
 
@@ -102,7 +102,7 @@ Without any further customized fine-tuning and data preprocessing, the model ach
 
 I want to work on it a bit more in the future to explore text data preparation and handmaking a Transformer model. Following a different section of the above mentioned article and other notebooks should serve as a good first step. Besides, I also want to try fine-tuning the model, see how different hyperparameters affect the model accuracy, and how other training strategies like using 5-fold Stratified Cross Validation to affect the model outcome. In [the next article](/pages/article/3.html), I discuss this work, and how I improved the model accuracy from 0.75758 to a consistent and reproducable ~0.786.
 
-![leaderboard](../images/real_disaster_leaderboard.PNG)
+![leaderboard](../assets/images/real_disaster_leaderboard.PNG)
 
 The pre-contest research, learning about Tensorflow and making sense of the data type took the most time. I feel like I learned a lot from this project, and hope you enjoyed my blog too! Feel free to comment if you have any thoughts.
 

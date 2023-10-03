@@ -1,8 +1,8 @@
 ---
 title: "Real Disaster Tweets Classification, Part 2: Transformer from scratch"
 tags: [NLP, Transformer, multi-head attention mechanism]
-style: fill
-color: light
+style: border
+color: primary
 description: A tutorial to build and train a Transformer model from scratch.
   Classify if a tweet is really reporting a disaster or not using pre-trianed model.
 ---
@@ -15,7 +15,7 @@ The ubiquitousness of smartphones enables people to announce an emergency they�
 
 But, it’s not always clear whether a person’s words are actually announcing a disaster. Take this example:
 
-![fake disaster tweet](../images/fake_disaster_tweet.png)
+![fake disaster tweet](../assets/images/fake_disaster_tweet.png)
 
 The author explicitly uses the word “ABLAZE” but means it metaphorically. This is clear to a human right away, especially with the visual aid. But it’s less clear to a machine.
 
