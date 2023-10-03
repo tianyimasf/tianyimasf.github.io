@@ -4,7 +4,7 @@ tags: [NLP, Transformer, multi-head attention mechanism]
 style: border
 color: primary
 description: A tutorial to build and train a Transformer model from scratch.
-  Classify if a tweet is really reporting a disaster or not using pre-trianed model.
+  Classify if a tweet is really reporting a disaster or not using pre-trained model.
 ---
 
 ## Background

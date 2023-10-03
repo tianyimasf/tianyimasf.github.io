@@ -1,7 +1,19 @@
-- name: Adobe Photoshop
+- name: Git command line
   percentage: 95
   color: info
 
-- name: Adobe Illustrator
+- name: Linux kernel programming
+  percentage: 75
+  color: success
+
+- name: Agile Development(DevOps)
+  percentage: 85
+  color: secondary
+
+- name: Collaborative Programming
+  percentage: 85
+  color: danger
+
+- name: Continual Learning
   percentage: 90
   color: success

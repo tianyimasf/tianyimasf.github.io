@@ -5,7 +5,7 @@ style: border
 color: primary
 description:
   A tutorial to understand multi-head attention mechanism behind the Transformer architecture.
-  Classify if a tweet is really reporting a disaster or not using pre-trianed model.
+  Classify if a tweet is really reporting a disaster or not using pre-trained model.
 ---
 
 ## Background

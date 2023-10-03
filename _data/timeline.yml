@@ -1,17 +1,37 @@
-- title: Student, Harvard CS
-  from: 2014
-  to: 2018
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-               reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+- title: Student, University of Rochester Math & CS Minor
+  from: 2016
+  to: 2021
+  description: Took various advanced math and CS classes. Participated in computational and theoretical math research and natural language processing CS research since freshmen summer.
 
-- title: Software Engineer, Google, UK
-  from: 2018
-  to: present
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-               reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+- title: Algorithm Intern, Advanced Institute of Information Technology, Hangzhou, China
+  from: Aug 2019
+  to: Dec 2019
+  description:
+    Peking University spin-off AI startup in China that partners with the government to build smart city solutions.
+    Utilized Baidu API in Python to effectively acquire and extract geographical data of the city of Hangzhou for comprehensive analysis.
+    Cleaned and prepared Chinese text data sourced from government civic infrastructure customer service hotline.
+    Collaborated in the development of a WeChat smart chatbot prototype, aiming to replace the existing voice bot.
+    Successfully presented the chatbot prototype to government officials, resulting in a partnered project to create an advanced intelligent customer service chatbot.
+    Systematically researched various Machine Learning Natural Language Processing techniques, effectively communicated findings to the team, contributing to the formulation of the next quarter's roadmap.
+
+- title: Software Engineer, Scale AI, San Francisco, US
+  from: April 2022
+  to: March 2023
+  description:
+    A unicorn startup in the Bay Area that builds data platforms and labeling service.
+    Revamped and deployed a regression model to automatically calculate data labeling payouts while continuously monitored the outcome. Improved operational productivity of payout calculation by 40%, resulting in a 3-5% decrease in labor cost.
+    Practiced agile development and devops methods, closely communicated and collaborated with the operation team to facilitated the transition of the workforce to the new predictive pricing system.
+    Collaborated with the payment engineering team through pair programming and code reviews, rebuilt and maintained features of the existing payout calculation infrastructure focusing the prepayment infrastructure system.
+    Assisted the weekly payout operation of 40k taskers using AWS Lambda, specifically their step functions. Monitored the process every other week on AWS Management Console and made sure each operation is successful.
+
+- title: Graduate Research Assistant, University of Colorado, Boulder, US
+  from: April 2023
+  to: Present
+  description:
+    Conducted in-depth study of Generative AI methods including stable diffusion, U-Net, and Transformers.
+    Collaborated closely with Prof. Daniel Acuna to implement image data generation using English and Chinese stable diffusion models, face detection, and gender and racial classifications.
+    Utilized Jupyter Notebook and command line window in a remote Linux environment to execute the image generation process.
+    Successfully refactored the entire image generation algorithm to ensure the generation of high-quality images.
+    Contributed to data analysis of the generated images through idea generation, discussions, critiques and code review.
+    Assisted in addressing the research question regarding gender and racial biases in Chinese and English Generative AI models.
+    Writing the experiment data preparation section of the draft research paper "AI Colonization -- Uncovering the Persistence of Biases in Fine-Tuned Chinese Image Generation Models"

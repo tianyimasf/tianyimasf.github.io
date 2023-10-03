@@ -1,11 +1,23 @@
-- name: HTML5/CSS3
-  percentage: 90
+- name: TypeScript
+  percentage: 100
   color: danger
 
-- name: Go
-  percentage: 80
-  color:
-
 - name: Python
-  percentage: 70
+  percentage: 100
+  color: success
+
+- name: React
+  percentage: 85
+  color: secondary
+
+- name: NodeJs
+  percentage: 90
+  color: info
+
+- name: MongoDB
+  percentage: 90
+  color: success
+
+- name: Cloud Concepts & Technology
+  percentage: 80
   color: secondary
