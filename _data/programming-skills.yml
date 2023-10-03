@@ -21,3 +21,15 @@
 - name: Cloud Concepts & Technology
   percentage: 80
   color: secondary
+
+- name: Natural Language Processing
+  percentage: 95
+  color: danger
+
+- name: Theoretical & Applied ML/DL
+  percentage: 85
+  color: info
+
+- name: Data Collection & Wrangling
+  percentage: 95
+  color: secondary
