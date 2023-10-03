@@ -7,7 +7,7 @@
   color: success
 
 - name: React
-  percentage: 85
+  percentage: 90
   color: secondary
 
 - name: NodeJs
@@ -19,16 +19,20 @@
   color: success
 
 - name: Cloud Concepts & Technology
-  percentage: 80
+  percentage: 70
   color: secondary
 
 - name: Natural Language Processing
   percentage: 95
   color: danger
 
-- name: Theoretical & Applied ML/DL
-  percentage: 85
+- name: Theoretical ML/DL
+  percentage: 80
   color: info
+
+- name: Applied ML/DL
+  percentage: 85
+  color: success
 
 - name: Data Collection & Wrangling
   percentage: 95

@@ -15,7 +15,7 @@ About this very first project: in high school I took AP Art History. Although I 
 
 In this notebook, I first analyzed the top 20 artists. Then I conducted a complete artist demographic analysis, using pie charts to visualize each attributes, such as gender, race, nationality, and ethnicity.
 
-![Most Frequent Words in Titles](../assets/images/artwork_title_wrodcloud.png)
+![Most Frequent Words in Titles](../assets/images/artwork_title_wordcloud.png)
 
 ![Artists Demographic Analysis](../assets/images/complete_demographic_analysis.png)
 
