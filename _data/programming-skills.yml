@@ -27,7 +27,7 @@
   color: danger
 
 - name: Theoretical ML/DL
-  percentage: 80
+  percentage: 75
   color: info
 
 - name: Applied ML/DL
