@@ -32,13 +32,13 @@ For this competition, I started by researching and understanding the details of 
 
 ### What is the attention mechanism and how it's used in Transformer
 
-The attention mechanism takes its input in the form of three parameters, known as Query(Q), Key(K) and Value(V). They come in the format of matrices with dimensions $Embed_size \times Embed_size$. The Transformer model uses three kinds of attention mechanisms:
+The attention mechanism takes its input in the form of three parameters, known as Query($Q$), Key($K$) and Value($V$). They come in the format of matrices with dimensions $Embed_{size} \times Embed_{size}$. The Transformer model uses three kinds of attention mechanisms:
 
 1. Self-attention in the Encoder — the input sequence pays attention to itself
 2. Self-attention in the Decoder — the target sequence pays attention to itself
 3. Encoder-Decoder-attention in the Decoder — the target sequence pays attention to the input sequence
 
-The main idea of Query, Key and Value is drawn from informtation retrieval. For example, if you are searching for YouTube videos, and put in a few key words(Q), the search engine look for similar tag words(K), and return videos(V) associated with those tags. The three attention parameter matrices: Query, Key and Value, are the backbone of the attention mechanism. Remember the big three!
+The main idea of Query, Key and Value is drawn from informtation retrieval. For example, if you are searching for YouTube videos, and put in a few key words($Q$), the search engine look for similar tag words($K$), and return videos($V$) associated with those tags. The three attention parameter matrices: Query, Key and Value, are the backbone of the attention mechanism. Remember the big three!
 
 ### Self-attention in the Encoder
 
@@ -56,15 +56,15 @@ As the data flows through self-attention and encoder-Decoder-attention blocks in
 
 ### The "Multi-head" Attention
 
-When the attention mechanism uses multiple heads, it means that the three attention parameter matrices in each attention block are each sliced into N smaller matrices with the same dimention $Embed_size \times (\dfrac{Embed_size}{N})$. In reality, the matrices are not actually decoupled into N different matrices, but conceptually different heads compute in different sections of the matrix and encode multiple relationships and aspects for each word. So the parameter martices $W_q, W_k, and W_v$ will look like this:
+When the attention mechanism uses multiple heads, it means that the three attention parameter matrices in each attention block are each sliced into N smaller matrices with the same dimention $Embed_{size} \times (\dfrac{Embed_size}{N})$. In reality, the matrices are not actually decoupled into N different matrices, but conceptually different heads compute in different sections of the matrix and encode multiple relationships and aspects for each word. So the parameter martices $W_{q}$, $W_{k}$, and $W_{v}$ will look like this:
 
 ![transformer wq](../assets/images/transformer_wq.webp)
 
-Notice the relationship between $Embed_size, Query_size and Number of Attention Heads N$ is $Query_size = \dfrac{Embed_size}{N}$
+Notice the relationship between $Embed_{size}$, $Query_{size}$ and Number of Attention Heads $N$ is $Query_{size} = \dfrac{Embed_{size}}{N}$
 
 ### What exactly happens inside the attention blocks?
 
-The three attention parameter matrices are linear layers. In the encoder self-attention blocks, the input sequence is processed and passed through these linear layers to produce the Q, K, and V matrices, like so:
+The three attention parameter matrices are linear layers. In the encoder self-attention blocks, the input sequence is processed and passed through these linear layers to produce the $Q$, $K$, and $V$ matrices, like so:
 
 ![transformer linear layer](../assets/images/transformer_linear_layer.webp)
 
@@ -76,7 +76,7 @@ The complete attention score then can be calculated in the Encoder self-attentio
 
 ![transformer attention score](../assets/images/transformer_attention_score.webp)
 
-It first multiplie %Q% with $K^{T}$, and then apply a mask of dimention $(seq - 1) \times (seq - 1)$ in order to mask out the padding word. It then applies a softmax to the matrix multiplication result divided by $\sqrt{Query_size}$, and multiply $V$ with the result as the final attention score.
+It first multiplie $Q$ with $K^{T}$, and then apply a mask of dimention $(seq - 1) \times (seq - 1)$ in order to mask out the padding word. It then applies a softmax to the matrix multiplication result divided by $\sqrt{Query_{size}}$, and multiply $V$ with the result as the final attention score.
 
 Finally, we reshape the attention scores for all attention heads by basically reversing the reshaping process we've done before. This effectively merges all attention scores together and getting the encoded representation that captures the attention scores, semantic and positional meaning of the words.
 
@@ -117,3 +117,5 @@ Ketan Doshi, [Transformers Explained Visually (Part 3): Multi-head Attention, de
 KiKaBeN, [Transformer’s Encoder-Decoder](<https://kikaben.com/transformers-encoder-decoder/#:~:text=The%20transformer%20uses%20an%20encoder,an%20output%20sentence%20(translation).>)
 
 Bharath K, [Transformers For Text Classification](https://blog.paperspace.com/transformers-text-classification/)
+
+{% include math.html %}
