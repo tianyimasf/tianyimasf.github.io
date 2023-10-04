@@ -1,5 +1,5 @@
 ---
-name: "a Tidy Tuesday Series: Art History Data Storytelling"
+name: "A Tidy Tuesday Series: Art History Data Storytelling"
 tools: [Data Wrangling, R, Tidyverse]
 image: ../assets/images/top_20_popular_artists.png
 description: Data Wrangling and Visualization using Art History Data by Tidy Tuesday
