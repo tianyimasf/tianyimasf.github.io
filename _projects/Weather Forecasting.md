@@ -5,7 +5,7 @@ image: ../assets/images/corr_heatmap_WiDS.png
 description: Long range extreme weather forcasting for fighting climate change.
 ---
 
-# Long Range Extreme Weather Forcasting
+# Long Range Extreme Weather Forecasting
 
 ![leader board](../assets/images/WiDS_leaderboard.PNG)
 
