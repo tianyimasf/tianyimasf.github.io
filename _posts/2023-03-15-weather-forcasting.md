@@ -1,5 +1,5 @@
 ---
-title: Extreme Weather Forcasting Contest
+title: Long Range Extreme Weather Forecasting
 tags:
   [
     Weather Forcasting,
@@ -10,7 +10,7 @@ tags:
   ]
 style: fill
 color: light
-description: Long range extreme weather forcasting for fighting climate change.
+description: Long range extreme weather forcasting to fight climate change.
 ---
 
 ## Background

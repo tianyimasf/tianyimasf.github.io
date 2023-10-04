@@ -2,7 +2,7 @@
 name: Long Range Extreme Weather Forecasting
 tools: [Weather Forcasting, Tabular Data, Climate Tech, Data Science, Python]
 image: ../assets/images/corr_heatmap_WiDS.png
-description: Long range extreme weather forcasting for fighting climate change.
+description: Long range extreme weather forcasting to fight climate change.
 ---
 
 # Long Range Extreme Weather Forecasting
