@@ -56,7 +56,7 @@ As the data flows through self-attention and encoder-Decoder-attention blocks in
 
 ### The "Multi-head" Attention
 
-When the attention mechanism uses multiple heads, it means that the three attention parameter matrices in each attention block are each sliced into N smaller matrices with the same dimention $Embed_{size} \times (\dfrac{Embed_size}{N})$. In reality, the matrices are not actually decoupled into N different matrices, but conceptually different heads compute in different sections of the matrix and encode multiple relationships and aspects for each word. So the parameter martices $W_{q}$, $W_{k}$, and $W_{v}$ will look like this:
+When the attention mechanism uses multiple heads, it means that the three attention parameter matrices in each attention block are each sliced into N smaller matrices with the same dimention $Embed_{size} \times (\dfrac{Embed_{size}}{N})$. In reality, the matrices are not actually decoupled into N different matrices, but conceptually different heads compute in different sections of the matrix and encode multiple relationships and aspects for each word. So the parameter martices $W_{q}$, $W_{k}$, and $W_{v}$ will look like this:
 
 ![transformer wq](../assets/images/transformer_wq.webp)
 
