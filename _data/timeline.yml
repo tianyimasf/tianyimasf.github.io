@@ -25,6 +25,7 @@
 - title: Undergaduate Research Assistant, University of Rochester, Rochester, NY
   from: Summer 2017
   to: Fall 2018
+  description:
     Actively participated in weekly meetings to gain expertise in computational linguistics for symbolic AI.
     Annotated and transformed a large volume of English text data into formal representations of natural language meaning and structured information.
     Constructed comprehensive answers and rules for a dialogue system tailored to engage with elderly individuals and mitigate feelings of loneliness.
@@ -33,6 +34,7 @@
 - title: Undergaduate Research Assistant, University of Rochester, Rochester, NY
   from: Oct 2021
   to: Dec 2021
+  description:
     Conducted numerical tests on the conceptual complexity of words utilizing Large Language Models including Word2Vec, GloVe, and BERT under the supervision of Prof. Jens Kipper.
     Co-authored and submitted the research paper titled "Conceptual Complexity, Conceptual Analysis, and Machine Learning" to Synthese for publication consideration.
 
