@@ -1,6 +1,6 @@
 ---
 name: Tableau, ArcGIS & Wordcloud Visualizations
-tools: [Tableau, ArcGIS, Wordcloud, 2D Visualization]
+tools: [Tableau, ArcGIS, Wordcloud, 2D Visualization, data visualization]
 image: ../assets/images/fb_network_3000_viz.png
 description: Various visualizations I made through my journey learning DS.
 ---
