@@ -11,6 +11,6 @@ tools:
     word embeddings,
   ]
 image: ../assets/images/word_vectors.png
-description: Analyzing Course Numbers of Organizations And Course Titles.
+description: Analyzing Number of Courses Per Organization And Course Titles.
 external_url: https://colab.research.google.com/drive/1t809_1VGvR1CoAa-S2wxafru0kqNNlth?usp=sharing
 ---
