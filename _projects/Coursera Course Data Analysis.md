@@ -12,5 +12,5 @@ tools:
   ]
 image: ../assets/images/word_vectors.png
 description: Analyzing Number of Courses Per Organization And Course Titles.
-external_url: https://colab.research.google.com/drive/1t809_1VGvR1CoAa-S2wxafru0kqNNlth?usp=sharing
+external_url: https://colab.research.google.com/drive/18Zw3fZuYsURaBimpC025lt32oEDetZ4y?usp=sharing
 ---
