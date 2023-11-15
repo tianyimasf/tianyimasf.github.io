@@ -1,11 +1,3 @@
-- name: TypeScript
-  percentage: 100
-  color: danger
-
-- name: Python
-  percentage: 100
-  color: success
-
 - name: React
   percentage: 90
   color: secondary
@@ -14,26 +6,26 @@
   percentage: 90
   color: info
 
-- name: MongoDB
-  percentage: 90
-  color: success
-
 - name: Cloud Concepts & Technology
   percentage: 70
   color: secondary
 
-- name: Natural Language Processing
+- name: Python & R
   percentage: 95
-  color: danger
-
-- name: Theoretical ML/DL
-  percentage: 75
-  color: info
-
-- name: Applied ML/DL
-  percentage: 85
   color: success
 
-- name: Data Collection & Wrangling
-  percentage: 95
+- name: SQL & Excel
+  percentage: 80
+  color: danger
+
+- name: ML/DL Algorithms
+  percentage: 80
+  color: info
+
+- name: Data Analysis
+  percentage: 90
   color: secondary
+
+- name: Data Engieering
+  percentage: 90
+  color: success
