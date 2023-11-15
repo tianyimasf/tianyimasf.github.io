@@ -69,7 +69,7 @@ In the end, I discovered that the code selenium scraped, though different from b
 
 Here is the full code:
 
-```
+```python
 js_code1 = 'return document.getElementById("about").getElementsByClassName("css-mzc3kb");'
 js_code2 = 'return document.getElementById("about").getElementsByClassName("css-is1tpd")[0].getElementsByTagName("h2")[0].innerHTML;'
 condition1 = lambda driver: driver.execute_script(js_code1) != []
