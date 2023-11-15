@@ -98,4 +98,4 @@ This time, the code works 100% of the time! 🥳
 
 This whole process took way longer than I expected. It shows that even though providing clean and accurate data seem easy, it's not an easy job at all. In the end though, it feels so good to see people actually utilizing my code to do interesting things!
 
-[Click here to see my data scraping code](https://github.com/tianyimasf/tidy-tuesday-social-dataset-analysis/blob/main/scrapping_coursera.py)
+[Click here to see my full data scraping code](https://github.com/tianyimasf/tidy-tuesday-social-dataset-analysis/blob/main/scrapping_coursera.py)
