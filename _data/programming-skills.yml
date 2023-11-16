@@ -26,6 +26,10 @@
   percentage: 90
   color: secondary
 
+- name: Statistical Analysis
+  percentage: 70
+  color: secondary
+
 - name: Data Engieering
   percentage: 70
   color: success
