@@ -1,67 +1,30 @@
-- title: Student, University of Rochester Math & CS Minor
+- title: Student, University of Rochester Mathematics Bachelor of Science; Minor, CS; Cluster, Philosophy
   from: 2016
   to: 2021
-  description: Took various advanced math and CS classes. Participated in computational and theoretical math research and natural language processing CS research since freshmen summer.
+  description: Data Structure and Algorithm, Probablity, Numerical Analysis, Data Mining, Machine Learning, Computer Organazation.
 
-- title: Algorithm Intern, Advanced Institute of Information Technology, Hangzhou, China
-  from: Aug 2019
-  to: Dec 2019
-  description:
-    Peking University spin-off AI startup in China that partners with the government to build smart city solutions.
-    Utilized Baidu API in Python to effectively acquire and extract geographical data of the city of Hangzhou for comprehensive analysis.
-    Cleaned and prepared Chinese text data sourced from government civic infrastructure customer service hotline.
-    Collaborated in the development of a WeChat smart chatbot prototype, aiming to replace the existing voice bot.
-    Successfully presented the chatbot prototype to government officials, resulting in a partnered project to create an advanced intelligent customer service chatbot.
-    Systematically researched various Machine Learning Natural Language Processing techniques, effectively communicated findings to the team, contributing to the formulation of the next quarter's roadmap.
-
-- title: Undergaduate Research Assistant, University of Rochester, Rochester, NY
-  from: Summer 2017
-  to: Fall 2018
-  description:
-    Actively participated in weekly meetings to gain expertise in computational linguistics for symbolic AI.
-    Annotated and transformed a large volume of English text data into formal representations of natural language meaning and structured information.
-    Constructed comprehensive answers and rules for a dialogue system tailored to engage with elderly individuals and mitigate feelings of loneliness.
-    Demonstrated the system's efficacy in alleviating loneliness among the elderly, resulting in co-authorship of a research paper.
-
-- title: Undergaduate Student Researcher, University of Rochester, Rochester, NY
+- title: Student Researcher, University of Rochester, Rochester, NY
   from: Summer 2017
   to: May 2021
   description:
-    Studied advanced topics in algebraic combinatorics, optimization, the R language, and "The Polynomial Method" by Prof. Larry Guth.
-    Collaborated with Prof. Alex Iosevich to apply optimization and Fourier Analysis techniques in solving a complex sum-product estimation problem based on incidence theory.
-    Utilized Python programming language to conduct extensive computational experiments, rigorously testing the theorem for prime numbers up to 1 million.
-
-- title: Undergaduate Research Assistant, University of Rochester, Rochester, NY
-  from: Oct 2021
-  to: Dec 2021
-  description:
-    Conducted numerical tests on the conceptual complexity of words utilizing Large Language Models including Word2Vec, GloVe, and BERT under the supervision of Prof. Jens Kipper.
-    Co-authored and submitted the research paper titled "Conceptual Complexity, Conceptual Analysis, and Machine Learning" to Synthese for publication consideration.
+    Studied advanced topics in combinatorics, optimization. Learned the R language.
+    Applied optimization techniques, bounded the size of subset of 3-dimensional finite field with q elements where the value of each dimension is of equal distance to each other according to two different distance metrics.
+    Utilized Python programming language, rigorously tested the result for q values that are prime numbers up to 1 million.
 
 - title: Software Engineer, Scale AI, San Francisco, CA
   from: April 2022
   to: March 2023
   description:
-    A unicorn startup in the Bay Area that builds data platforms and labeling service.
-    Revamped and deployed a regression model to automatically calculate data labeling payouts while continuously monitored the outcome. Improved operational productivity of payout calculation by 40%, resulting in a 3-5% decrease in labor cost.
-    Practiced agile development and devops methods, closely communicated and collaborated with the operation team to facilitated the transition of the workforce to the new predictive pricing system.
-    Collaborated with the payment engineering team through pair programming and code reviews, rebuilt and maintained features of the existing payout calculation infrastructure focusing the prepayment infrastructure system.
-    Assisted the weekly payout operation of 40k taskers using AWS Lambda, specifically their step functions. Monitored the process every other week on AWS Management Console and made sure each operation is successful.
+    Built and hosted a regression model on AWS to predict data labeling pricing from scratch, using TypeScript and Node.js. Eliminated the operational cost of manual pricing, and reduced data labeling cost by ~10%.
+    Utilized Redash which is a frontend that is connected to our MongoDB database, queried worker data using SQL and debugged labeling worker payment issues in our Node backend codebase.
+    Became the go-to person for labeling worker payment issues and ensured accurate worker payout.
 
-- title: Graduate Research Assistant, University of Colorado, Boulder, US
+- title: Graduate Research Assistant, University of Colorado Boulder, US
   from: April 2023
   to: Present
   description:
-    Conducted in-depth study of Generative AI methods including stable diffusion, U-Net, and Transformers.
-    Collaborated closely with Prof. Daniel Acuna to implement image data generation using English and Chinese stable diffusion models, face detection, and gender and racial classifications.
-    Utilized Jupyter Notebook and command line window in a remote Linux environment to execute the image generation process.
-    Successfully refactored the entire image generation algorithm to ensure the generation of high-quality images.
-    Contributed to data analysis of the generated images through idea generation, discussions, critiques and code review.
-    Assisted in addressing the research question regarding gender and racial biases in Chinese and English Generative AI models.
-    Writing the experiment data preparation section of the draft research paper "AI Colonization -- Uncovering the Persistence of Biases in Fine-Tuned Chinese Image Generation Models"
-
-- title: Chinese Translator, Earth Hero, Remote
-  from: May 2023
-  to: Present
-    Translating English texts to Chinese to publish the Earth Hero mobile app in Chinese, using the app Lokalise.
-    Assisting with Earth Hero’s mission to take action for people & planet.
+    Science of Science Lab researches gender and racial biases in Chinese and English Generative AI models.
+    Conducted in-depth research of Generative AI algorithms including stable diffusion, U-Net, and large language models like the Transformer. Presented the results to the research group.
+    Gathered ~40GB experiment image data using English and Chinese prompts and stable diffusion models. Labeled each image using face detection, and gender and racial classifiers.
+    Refactored the Python image generation workflow that improved the rate of high quality data generation by 20%.
+    Writing the experiment data preparation section of the draft research paper.

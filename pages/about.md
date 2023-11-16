@@ -8,10 +8,7 @@ weight: 3
 # **About Me**
 
 Hi I am **{{ site.author.name }}** :wave:,<br>
-I'm a programmer, a researcher and machine learning practitioner. I love researching and learning
-CS and ML topics and skills. I'm obsessed with writing clean, high quality code and beautiful algorithms.
-In my spare time, I play video games, travel and cook. I love talking about software engineering and
-machine learning so feel free to shoot me a message!
+Experienced software and AI professional. Proficiency in skills such as Python, R, SQL, Excel, Tableau, Dash, and Plotly. Experience and passion in conducting applied large language model and generative AI research. Strong communication, organizational, and analytical skills.
 
 <div class="row">
 {% include about/skills.html title="Programming Skills" source=site.data.programming-skills %}
