@@ -8,7 +8,7 @@ weight: 3
 # **About Me**
 
 Hi I am **{{ site.author.name }}** :wave:,<br>
-Experienced software and AI professional. Proficiency in skills such as Python, R, SQL, Excel, Tableau, Dash, and Plotly. Experience and passion in conducting applied large language model and generative AI research. Strong communication, organizational, and analytical skills.
+Experienced software, data, and AI professional. Proficiency in skills such as Python, R, SQL, Excel, Tableau, Dash, and Plotly. Experience and passion in conducting applied large language model and generative AI research. Love gaming, cooking, playing with my cat, and musics in my spare time.
 
 <div class="row">
 {% include about/skills.html title="Programming Skills" source=site.data.programming-skills %}
