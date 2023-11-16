@@ -7,11 +7,11 @@
   color: success
 
 - name: Agile Development(DevOps)
-  percentage: 75
+  percentage: 65
   color: secondary
 
 - name: Collaborative Programming
-  percentage: 75
+  percentage: 70
   color: danger
 
 - name: Continual Learning
