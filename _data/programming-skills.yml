@@ -7,7 +7,7 @@
   color: info
 
 - name: Cloud Concepts & Technology
-  percentage: 70
+  percentage: 50
   color: secondary
 
 - name: Python & R
@@ -15,11 +15,11 @@
   color: success
 
 - name: SQL & Excel
-  percentage: 80
+  percentage: 65
   color: danger
 
 - name: ML/DL Algorithms
-  percentage: 80
+  percentage: 70
   color: info
 
 - name: Data Analysis
@@ -27,5 +27,5 @@
   color: secondary
 
 - name: Data Engieering
-  percentage: 90
+  percentage: 70
   color: success

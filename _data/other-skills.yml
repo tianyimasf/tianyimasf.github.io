@@ -3,17 +3,17 @@
   color: info
 
 - name: Linux kernel programming
-  percentage: 70
+  percentage: 65
   color: success
 
 - name: Agile Development(DevOps)
-  percentage: 85
+  percentage: 75
   color: secondary
 
 - name: Collaborative Programming
-  percentage: 85
+  percentage: 75
   color: danger
 
 - name: Continual Learning
-  percentage: 85
+  percentage: 90
   color: success
