@@ -22,10 +22,10 @@ Not a lot to see here. Of course, first of all load tidyverse.
 
 A list of common functions and short descriptions:
 
-- head(): to see the complete first 5 rows of the dataframe, no matter how many columns there are.
-- colnames(): as the function name suggests, return a list of column names in the dataframe.
-- n_distinct(column): return the number of distinct values for a column. Doesn't return what they are and their counts.
-- nrow(): return the number of rows a dataframe has.
+- `head()`: to see the complete first 5 rows of the dataframe, no matter how many columns there are.
+- `colnames()`: as the function name suggests, return a list of column names in the dataframe.
+- `n_distinct(column)`: return the number of distinct values for a column. Doesn't return what they are and their counts.
+- `nrow():` return the number of rows a dataframe has.
 
 # Data cleaning
 
@@ -33,7 +33,7 @@ I removed outliers since they skewed the distribution and would distablize analy
 
 R doesn't seem to have a function to do this, so I wrote my own:
 
-```{r}
+```r
 filter_outlier <- function(data, column){
   quartiles <- quantile(column, probs=c(.25, .75), na.rm = FALSE)
   IQR <- IQR(column)
@@ -48,7 +48,7 @@ filter_outlier <- function(data, column){
 
 The function returns a dataframe without the outliers, but you can also return the outliers by setting `column > Upper` in the second to last line. You might want to rename `data_no_outlier` to something like `outeliers`.
 
-As you see, the function calculate Q1 and Q3 of the data. The lower bound is obtained by minus Q1 with $1.5 \times IQR$, and the upper bounds add $1.5 \times IQR$ to Q3. The reason behind this is that calculated this way, the upper and lower bound is approximately $\displaystyle \pm 2.7 \times std$, which is close to 3 standard deiviation from the center mean.
+As you see, the function calculate $Q_1$ and $Q_3$ of the data. The lower bound is obtained by minus $Q_1$ with $1.5 \times IQR$, and the upper bounds add $1.5 \times IQR$ to $Q_3$. The reason behind this is that calculated this way, the upper and lower bound is approximately $\displaystyle \pm 2.7 \times std$, which is close to 3 standard deiviation from the center mean.
 
 # Data Analysis with Visualizations
 
@@ -56,40 +56,40 @@ My next step is to analyze the relationship between distance with various intens
 
 One line of code looks like this:
 
-```{r}
+```r
 p1 <- ggplot(data=very_active_distance, aes(x=VeryActiveDistance, y=Calories)) + geom_point() + geom_smooth()
 ```
 
 Let's break down this one-liner.
 
-- ggplot() initialize a ggplot object.
+- `ggplot()` initialize a ggplot object.
   - According to the official doc, "it can be used to declare the input data frame for a graphic and to specify the set of plot aesthetics."
   - The first half of the sentence is clear enough -- it specifies which dataframe to use for this graph.
   - The second half of the sentence requires us know what the heck "aesthetics" mean here.
   - It means "something you can see", so here we can specify x = ..., y = ..., color = ..., and so on.
   - Each aesthetic will be initialized with a name value pair where the value is a layer variable, which means you directly refer to the column name instead of referring to the dataframe
-- geom_point() specifies that this would be a scatter plot
-- geom_smooth() will add the correlation line over the scatter plot, with a grey area around the line to indicate the data point variance.
+- `geom_point()` specifies that this would be a scatter plot
+- `geom_smooth()` will add the correlation line over the scatter plot, with a grey area around the line to indicate the data point variance.
 
 Before I show you the final plot, bare with me to see how you can create subplots and combine them.
 
 First we install and load a package called "gridExtra".
 
-```{r}
+```r
 install.packages("gridExtra")
 library("gridExtra") # double quote is not necessary here
 ```
 
 Then we create two other plots using the same code as before, only replace the variables, and call them `p2` and `p3`.
 
-```{r}
+```r
 p2 <- ggplot(data=moderately_active_distance, aes(x=ModeratelyActiveDistance, y=Calories)) + geom_point() + geom_smooth()
 p3 <- ggplot(data=light_active_distance, aes(x=LightActiveDistance, y=Calories)) + geom_point() + geom_smooth()
 ```
 
-using the grid.arrange() function, we can create a subplot, specifying that we want 2 rows of subplots:
+using the `grid.arrange()` function, we can create a subplot, specifying that we want 2 rows of subplots:
 
-```{r}
+```r
 grid.arrange(p1, p2, p3, nrow = 2)
 ```
 
@@ -108,6 +108,8 @@ It looks like VeryActiveMinutes have a positive correlation with calories burnt.
 I also plotted Total Steps and Total Distance's correlation with calories burnt, and the result is not surprising -- they clearly correlates positively.
 
 # Multivariate Regression Analysis
+
+## Theory (don't be scared!)
 
 This is a great yet basic statistical technique to actually quantify the relationships between independent variables("predictors", "explanatory") and dependent("target") variable.
 
@@ -140,5 +142,11 @@ It's just a level up of the univariate version! But more granular.
 And you can also calculate scores based on your model to see how well your model "models" the variance in your target variable($R^2$), and also if your model gives you significant signals instead of just random noise($p$-value).
 
 Now we can apply what we know about regression analysis to the tracker data.
+
+### Actual Codes
+
+R, as great as it is as a statistical analysis language, of course are prepared for this.
+
+First, we load the dataset and convert distances to speeds. Distance
 
 {% include math.html %}
