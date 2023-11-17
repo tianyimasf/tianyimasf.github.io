@@ -3,16 +3,18 @@ name: "Fitbit Tracker Usage Analysis in R: the Techniques"
 tools:
   [data analysis, data visualization, regression analysis, business case study]
 image: ../assets/images/total_steps.png
-description: An exaustive list of techniques I used to analyze Fitbit Tracker usage data
+description: An exaustive list of techniques I used to analyze Fitbit Tracker usage data.
 ---
 
 ![Personal Step Preference](../assets/images/steps_preference.png)
 
 # What to expect in this blog
 
-This is going to be a slightly technical blog, just because it'll focus on the techniques I used to analyze the dataset and extract relationships and insights. There won't be any math, though, only numbers produced by a technique, what the technique does, what the numbers mean, and what's the code for it. The code is usually one-liners since R is just that cool (? jk. or am I? :p)
+This is going to be a slightly technical blog, just because it'll focus on the techniques I used to analyze the dataset and extract relationships and insights. There won't be any complex math, though, only simple theory explanation, numbers produced by a technique, what the technique does, what the numbers mean, and what's the code for it. The code is usually one-liners since R is just that cool (? jk. Or am I? :p)
 
-I thought it would be useful to just boom boom boom, get a ton of helpful techniques out there, for reference purposes. So here we go.
+I thought it would be useful to just boom boom boom, get a ton of helpful techniques out there, for reference purposes. This could get a bit long.
+
+So here we go.
 
 [Complete R Notebook for reference](https://www.kaggle.com/code/tianyimasf/fitbit-usage-trend-analysis-viz-regression)
 
