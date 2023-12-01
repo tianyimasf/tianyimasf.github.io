@@ -94,6 +94,16 @@
 
 {
 "category": "",
+"title": "Coursera course data analysis in python",
+"description": "Text analysis and topic extraction using Coursera courses data.Kaggle Noteboo...",
+"url": "/projects/Coursera%20Course%20Data%20Analysis%20in%20Python/",
+"image": "../assets/images/word_cloud_all_courses.png",
+"author": ""
+}
+,
+
+{
+"category": "",
 "title": "Anime character art and personality dataset",
 "description": "Kaggle DatasetI’m broadly interested in the MBTI personality framework, and I...",
 "url": "/projects/Anime%20Character%20Art%20and%20Personality%20Dataset/",
