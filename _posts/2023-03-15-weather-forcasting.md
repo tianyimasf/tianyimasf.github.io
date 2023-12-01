@@ -1,16 +1,11 @@
 ---
 title: Long Range Extreme Weather Forecasting
-tags:
-  [
-    Weather Forcasting,
-    Data Preprocessing,
-    Gradient Boosting,
-    Decision Tree,
-    Bayesian Optimization,
-  ]
-style: fill
-color: light
-description: Long range extreme weather forcasting to fight climate change.
+image: ../assets/images/corr_heatmap_WiDS.png
+author: Alex Ma
+categories:
+  - projects
+  - tutorials
+layout: post
 ---
 
 ## Background

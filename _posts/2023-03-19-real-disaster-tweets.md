@@ -1,11 +1,11 @@
 ---
 title: "Real Disaster Tweets Classification: A Multi-head Attention Tutorial with Application"
-tags: [NLP, Transformer, multi-head attention mechanism]
-style: border
-color: primary
-description:
-  A tutorial to understand multi-head attention mechanism behind the Transformer architecture.
-  Classify if a tweet is really reporting a disaster or not using pre-trained model.
+image: ../assets/images/transformer_wq.webp
+author: Alex Ma
+categories:
+  - projects
+  - tutorials
+layout: post
 ---
 
 ## Background
@@ -16,7 +16,7 @@ The ubiquitousness of smartphones enables people to announce an emergency they�
 
 But, it’s not always clear whether a person’s words are actually announcing a disaster. Take this example:
 
-![fake disaster tweet](../assets/images/fake_disaster_tweet.png)
+![fake disaster tweet](../../assets/images/fake_disaster_tweet.png)
 
 The author explicitly uses the word “ABLAZE” but means it metaphorically. This is clear to a human right away, especially with the visual aid. But it’s less clear to a machine.
 
@@ -58,7 +58,7 @@ As the data flows through self-attention and encoder-Decoder-attention blocks in
 
 When the attention mechanism uses multiple heads, it means that the three attention parameter matrices in each attention block are each sliced into N smaller matrices with the same dimention $Embed_{size} \times (\dfrac{Embed_{size}}{N})$. In reality, the matrices are not actually decoupled into N different matrices, but conceptually different heads compute in different sections of the matrix and encode multiple relationships and aspects for each word. So the parameter martices $W_{q}$, $W_{k}$, and $W_{v}$ will look like this:
 
-![transformer wq](../assets/images/transformer_wq.webp)
+![transformer wq](../../assets/images/transformer_wq.webp)
 
 Notice the relationship between $Embed_{size}$, $Query_{size}$ and Number of Attention Heads $N$ is $Query_{size} = \dfrac{Embed_{size}}{N}$
 
@@ -66,25 +66,25 @@ Notice the relationship between $Embed_{size}$, $Query_{size}$ and Number of Att
 
 The three attention parameter matrices are linear layers. In the encoder self-attention blocks, the input sequence is processed and passed through these linear layers to produce the $Q$, $K$, and $V$ matrices, like so:
 
-![transformer linear layer](../assets/images/transformer_linear_layer.webp)
+![transformer linear layer](../../assets/images/transformer_linear_layer.webp)
 
 The Q, K, and V matrices output by the linear layers are reshaped to include an explicit Head dimension. After then swaping the Head and Sequence dimention, we can now logically seperate the matrix into N Q matrices, one for each head.
 
-![reshape_QKV](../assets/images/reshape_QKV.webp)
+![reshape_QKV](../../assets/images/reshape_QKV.webp)
 
 The complete attention score then can be calculated in the Encoder self-attention:
 
-![transformer attention score](../assets/images/transformer_attention_score.webp)
+![transformer attention score](../../assets/images/transformer_attention_score.webp)
 
 It first multiplie $Q$ with $K^{T}$, and then apply a mask of dimention $(seq - 1) \times (seq - 1)$ in order to mask out the padding word. It then applies a softmax to the matrix multiplication result divided by $\sqrt{Query_{size}}$, and multiply $V$ with the result as the final attention score.
 
 Finally, we reshape the attention scores for all attention heads by basically reversing the reshaping process we've done before. This effectively merges all attention scores together and getting the encoded representation that captures the attention scores, semantic and positional meaning of the words.
 
-![reshape_attention_score](../assets/images/reshape_attention_score.webp)
+![reshape_attention_score](../../assets/images/reshape_attention_score.webp)
 
 Putting it together, this is the complete workflow of the multi-headed attention block.
 
-![transformer self attention architecture](../assets/images/transformer_self_attention_architecture.webp)
+![transformer self attention architecture](../../assets/images/transformer_self_attention_architecture.webp)
 
 The decoder self-attention and encoder-decoder-attention blocks are the same except with differently-shaped attention masks to mask out the padding token.
 
@@ -102,7 +102,7 @@ Without any further customized fine-tuning and data preprocessing, the model ach
 
 I want to work on it a bit more in the future to explore text data preparation and handmaking a Transformer model. Following a different section of the above mentioned article and other notebooks should serve as a good first step. Besides, I also want to try fine-tuning the model, see how different hyperparameters affect the model accuracy, and how other training strategies like using 5-fold Stratified Cross Validation to affect the model outcome. In [the next article](/pages/article/3.html), I discuss this work, and how I improved the model accuracy from 0.75758 to a consistent and reproducable ~0.786.
 
-![leaderboard](../assets/images/real_disaster_leaderboard.PNG)
+![leaderboard](../../assets/images/real_disaster_leaderboard.PNG)
 
 The pre-contest research, learning about Tensorflow and making sense of the data type took the most time. I feel like I learned a lot from this project, and hope you enjoyed my blog too! Feel free to comment if you have any thoughts.
 
@@ -117,5 +117,3 @@ Ketan Doshi, [Transformers Explained Visually (Part 3): Multi-head Attention, de
 KiKaBeN, [Transformer’s Encoder-Decoder](<https://kikaben.com/transformers-encoder-decoder/#:~:text=The%20transformer%20uses%20an%20encoder,an%20output%20sentence%20(translation).>)
 
 Bharath K, [Transformers For Text Classification](https://blog.paperspace.com/transformers-text-classification/)
-
-{% include math.html %}

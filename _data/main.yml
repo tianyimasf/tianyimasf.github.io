@@ -1,0 +1,94 @@
+# Image, name, profession in the sidebar
+
+image: /assets/images/profile_pic.jpg
+name: Alex Tianyi Ma
+profession: A Data Analyst/Scientist
+email: tianyi437@gmail.com # The contact form submissions will be received in this email address.
+
+#   ,-----.       ,--.                   ,---.  ,--.
+#  '  .--./ ,---. |  | ,---. ,--.--.    '   .-' |  ,---.  ,---. ,--,--,--. ,---.
+#  |  |    | .-. ||  || .-. ||  .--'    `.  `-. |  .-.  || .-. :|        || .-. :
+#  '  '--'\' '-' '|  |' '-' '|  |       .-'    ||  | |  |\   --.|  |  |  |\   --.
+#   `-----' `---' `--' `---' `--'       `-----' `--' `--' `----'`--`--`--' `----'
+#
+# There are 5 color schemes to choose from.
+# The one at the bottom takes precedence.
+color-scheme: orange
+color-scheme: pink
+color-scheme: purple
+color-scheme: green
+color-scheme: blue
+
+
+# Set this to false in production
+color-scheme-changer-widget: true
+
+
+
+
+# Menu items in the sidebar
+# Use a maximum of 3 items
+menu:
+  - title: Projects
+    link: /projects/
+
+  - title: Blog
+    link: /blog/
+
+  - title: Contact
+    link: /contact/
+
+
+
+# Social icons in the sidebar
+# use font awesome icon code in the 'icon:' value
+social:
+  # facebook:
+  #      icon: fa-facebook-square
+  #      link: https://facebook.com
+
+  # twitter:
+  #     icon: fa-twitter
+  #     link: https://twitter.com
+
+  linkedin:
+      icon: fa-linkedin
+      link: https://www.linkedin.com/in/alex-tianyi-ma/
+
+  github:
+      icon: fa-github
+      link: https://github.com/tianyimasf
+
+
+
+expertise:
+  - title: "Data_Analysis"
+    level: 80
+    color: rgb(247, 205, 182)
+
+  - title: "Data_Visualization"
+    level: 60
+    color: rgb(113, 178, 222)
+
+  - title: Python
+    level: 90
+    color: rgb(80, 185, 185)
+
+  - title: Excel
+    level: 70
+    color: rgb(160, 158, 158)
+
+  - title: SQL
+    level: 90
+    color: rgb(112, 195, 148)
+
+  - title: "Machine_Learning_Algorithms"
+    level: 65
+    color: rgb(124, 142, 222)
+
+  - title: R
+    level: 70
+    color: rgb(230, 133, 172)
+
+
+buy-button: false

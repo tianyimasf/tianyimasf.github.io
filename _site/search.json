@@ -1,0 +1,135 @@
+[
+
+{
+"category": "thoughts",
+"title": "Just because people around you are all 0-100 doesn’t mean you can’t be the 100+1",
+"description": "What is the meaning of this?Some background information first.Growing up, esp...",
+"url": "/blog/101/",
+"image": "../assets/images/diversity3.PNG",
+"author": "Alex Ma"
+}
+,
+
+{
+"category": "projects, tutorials",
+"title": "Real Disaster Tweets Classification, Part 2: Transformer from scratch",
+"description": "BackgroundTwitter has become an important communication channel in times of e...",
+"url": "/blog/real-disaster-tweets-part-2/",
+"image": "../assets/images/fake_disaster_tweet.png",
+"author": "Alex Ma"
+}
+,
+
+{
+"category": "projects, tutorials",
+"title": "Real Disaster Tweets Classification: A Multi-head Attention Tutorial with Application",
+"description": "BackgroundTwitter has become an important communication channel in times of e...",
+"url": "/blog/real-disaster-tweets/",
+"image": "../assets/images/transformer_wq.webp",
+"author": "Alex Ma"
+}
+,
+
+{
+"category": "projects, tutorials",
+"title": "Long Range Extreme Weather Forecasting",
+"description": "BackgroundThe WiDS Datathon 2023 focuses on a prediction task involving forec...",
+"url": "/blog/weather-forcasting/",
+"image": "../assets/images/corr_heatmap_WiDS.png",
+"author": "Alex Ma"
+}
+
+,
+
+
+{
+"category": "",
+"title": "Weather forecasting",
+"description": "Long Range Extreme Weather ForecastingThe WiDS Datathon 2023 focuses on a pre...",
+"url": "/projects/Weather%20Forecasting/",
+"image": "../assets/images/corr_heatmap_WiDS.png",
+"author": ""
+}
+,
+
+{
+"category": "",
+"title": "Disaster tweets classification",
+"description": "Real Disaster Tweets PredictionTwitter has become an important communication ...",
+"url": "/projects/Disaster%20Tweets%20Classification/",
+"image": "../assets/images/real_disaster_model.PNG",
+"author": ""
+}
+,
+
+{
+"category": "",
+"title": "Project star gazing",
+"description": "3D Visualzation of Stars ⭐ in Our UniverseStars always catches people’s imagi...",
+"url": "/projects/Project%20Star%20Gazing/",
+"image": "../assets/images/star_gaze_app.png",
+"author": ""
+}
+,
+
+{
+"category": "",
+"title": "Mushroom image classifcation",
+"description": "Project Deep Shroom: 9 Species &amp;amp; 280 Species9 SpeciesUsing fast.ai, t...",
+"url": "/projects/Mushroom%20Image%20Classifcation/",
+"image": "../assets/images/280_mushroom_species_classifier.PNG",
+"author": ""
+}
+,
+
+{
+"category": "",
+"title": "Changing colors",
+"description": "Moving ColorsColors, in first glance, seem to be a visual trait. However, it’...",
+"url": "/projects/Changing%20Colors/",
+"image": "../assets/images/moving_colors2.PNG",
+"author": ""
+}
+,
+
+{
+"category": "",
+"title": "Anime character art and personality dataset",
+"description": "Kaggle DatasetI’m broadly interested in the MBTI personality framework, and I...",
+"url": "/projects/Anime%20Character%20Art%20and%20Personality%20Dataset/",
+"image": "../assets/images/anime_art.PNG",
+"author": ""
+}
+,
+
+{
+"category": "",
+"title": "Building coursera course dataset",
+"description": "Why are Coursera data interesting?DatasetThere could be a number of reasons.F...",
+"url": "/projects/Building%20Coursera%20Course%20Dataset/",
+"image": "../assets/images/word_vectors.png",
+"author": ""
+}
+,
+
+{
+"category": "",
+"title": "Fitbit tracker usage analysis in r",
+"description": "What to expect in this blogThis is going to be a slightly technical blog, jus...",
+"url": "/projects/Fitbit%20Tracker%20Usage%20Analysis%20in%20R/",
+"image": "../assets/images/total_steps.png",
+"author": ""
+}
+,
+
+{
+"category": "",
+"title": "My spotify data analysis in sql",
+"description": "Top Played Songs at Different Times of Day (night / late night)This project i...",
+"url": "/projects/My%20Spotify%20Data%20Analysis%20in%20SQL/",
+"image": "../assets/images/top_played_tracks_at_late_night.png",
+"author": ""
+}
+
+
+]

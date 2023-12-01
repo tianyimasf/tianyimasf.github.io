@@ -1,10 +1,11 @@
 ---
 title: "Real Disaster Tweets Classification, Part 2: Transformer from scratch"
-tags: [NLP, Transformer, multi-head attention mechanism]
-style: border
-color: primary
-description: A tutorial to build and train a Transformer model from scratch.
-  Classify if a tweet is really reporting a disaster or not using pre-trained model.
+image: ../assets/images/fake_disaster_tweet.png
+author: Alex Ma
+categories:
+  - projects
+  - tutorials
+layout: post
 ---
 
 ## Background
@@ -15,7 +16,7 @@ The ubiquitousness of smartphones enables people to announce an emergency they�
 
 But, it’s not always clear whether a person’s words are actually announcing a disaster. Take this example:
 
-![fake disaster tweet](../assets/images/fake_disaster_tweet.png)
+![fake disaster tweet](../../assets/images/fake_disaster_tweet.png)
 
 The author explicitly uses the word “ABLAZE” but means it metaphorically. This is clear to a human right away, especially with the visual aid. But it’s less clear to a machine.
 
@@ -23,7 +24,7 @@ In this competition, we’re challenged to build a machine learning model that p
 
 ## Introduction
 
-In [Part 1 of this project](/pages/article/1.html), I covered 1) the architecture of Transformer model, 2) solving this problem using pre-trained Transformer LM, 3) the result and some analysis of the result. After I was done using the pre-trained model, I was curious if homemade model would behave better, so I started from the ground up by building the encoder architecture, train it, and fine-tuning using various different combinations of hypter-parameters. I also added text-preprocessing. It turns out the model can render to be 2.5-3% higher than using pre-trained model using a much smaller model, a 5-fold Stratified Cross Validation, and saving models at each epoch if it's the best model seen so far depending on validation accuracy.
+In [Part 1 of this project](/blog/real-disaster-tweets/), I covered 1) the architecture of Transformer model, 2) solving this problem using pre-trained Transformer LM, 3) the result and some analysis of the result. After I was done using the pre-trained model, I was curious if homemade model would behave better, so I started from the ground up by building the encoder architecture, train it, and fine-tuning using various different combinations of hypter-parameters. I also added text-preprocessing. It turns out the model can render to be 2.5-3% higher than using pre-trained model using a much smaller model, a 5-fold Stratified Cross Validation, and saving models at each epoch if it's the best model seen so far depending on validation accuracy.
 
 ## The Algorithm
 
@@ -136,7 +137,7 @@ class TransformerBlock(Layer):
         return self.layernorm2(out1 + ffn_output)
 ```
 
-As you can see they matches the Transformer architecture we discussed in Part 1. If you need a refresher, [here](/pages/article/1.html) is the last article. Now we just need to actually build the model, so we have:
+As you can see they matches the Transformer architecture we discussed in Part 1. If you need a refresher, [here](/blog/real-disaster-tweets/) is the last article. Now we just need to actually build the model, so we have:
 
 ```python
 embed_dim = 64  # Embedding size for each token

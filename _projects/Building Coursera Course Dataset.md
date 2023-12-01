@@ -1,15 +1,16 @@
 ---
 name: Building Coursera Course Dataset
-tools: [data collection, web scraping, selenium, beautifulsoup4]
 image: ../assets/images/word_vectors.png
 description: Scraped and built Coursera Course dataset.
+date: 2023-11-09
+layout: post
 ---
 
-![Coursera Course Dataset Snapshot](../assets/images/Coursera_Dataset_snapshot.PNG)
+# Why are Coursera data interesting?
+
+![Coursera Course Dataset Snapshot](../../assets/images/Coursera_Dataset_snapshot.PNG)
 
 [Dataset](https://www.kaggle.com/datasets/tianyimasf/coursera-course-dataset)
-
-# Why are Coursera data interesting?
 
 There could be a number of reasons.
 

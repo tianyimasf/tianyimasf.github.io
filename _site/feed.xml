@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-11-30T22:03:18-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Blackcurrant</title><subtitle>Blackcurrant is a minimal theme to show off your skills online.</subtitle><entry><title type="html">Just because people around you are all 0-100 doesn’t mean you can’t be the 100+1</title><link href="http://localhost:4000/blog/101/" rel="alternate" type="text/html" title="Just because people around you are all 0-100 doesn’t mean you can’t be the 100+1" /><published>2023-11-15T00:00:00-07:00</published><updated>2023-11-15T00:00:00-07:00</updated><id>http://localhost:4000/blog/101</id><content type="html" xml:base="http://localhost:4000/blog/101/"><![CDATA[<p><img src="../../assets/images/diversity3.PNG" alt="diversity" /></p>
+
+<p>What is the meaning of this?</p>
+
+<p>Some background information first.</p>
+
+<p>Growing up, especially as a girl in a collectivism culture, I was expected to fit in. I wanted people to like me so so much. Even though I maintain a cool front, I felt bad every time I look at the “popular” kids and thought that I’m not one of them.</p>
+
+<p>I’m not one of the “normal” kids.</p>
+
+<p>The normal range of personality is 0-100, and I’m the 100 plus 1. You can even tell from the way I numericalized the range: I started from index 0, like a programmer, instead of 1, like a normal dude. (I go with any pronouns btw, shocking! Bet not anyone just goes around and say that.)</p>
+
+<p>I didn’t feel that that’s okay for most of my life. Not until I met soon-to-be my one of the most important person in my life – my now husband, whose instagram bio is: I found solitude in an act of harmless peculiarity.</p>
+
+<p>Hmm…there’s something about this dude that I like 😉</p>
+
+<p>In a lot of ways, him and me are very similar: we both view work as part of life, instead of all of life. We like idle and slow times. We say we don’t have any IRL friends 😄, and there is some truth to that.</p>
+
+<p>We are the minority.</p>
+
+<p>And I became used to it. And gradually and unintentionally, accepted it.</p>
+
+<p>Even though the majority of the people are going in one direction, it’s okay to create and enjoy your own journey. Unique to you.</p>
+
+<p>Since this realization, I started to see more and more people, just walking their own path in life, different from what seems to be the mainstream, but equally meaningful and enriching.</p>
+
+<p>So I want to let others who might be also struggling with this know that it’s ok to choose what You think, believe and do, despite what others are doing.</p>
+
+<p>It’s ok to be the 100 plus 1.</p>]]></content><author><name>Alex Ma</name></author><category term="thoughts" /><summary type="html"><![CDATA[]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/diversity3.PNG" /><media:content medium="image" url="http://localhost:4000/assets/images/diversity3.PNG" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Real Disaster Tweets Classification, Part 2: Transformer from scratch</title><link href="http://localhost:4000/blog/real-disaster-tweets-part-2/" rel="alternate" type="text/html" title="Real Disaster Tweets Classification, Part 2: Transformer from scratch" /><published>2023-04-27T00:00:00-06:00</published><updated>2023-04-27T00:00:00-06:00</updated><id>http://localhost:4000/blog/real-disaster-tweets-part-2</id><content type="html" xml:base="http://localhost:4000/blog/real-disaster-tweets-part-2/"><![CDATA[<h2 id="background">Background</h2>
+
+<p>Twitter has become an important communication channel in times of emergency.</p>
+
+<p>The ubiquitousness of smartphones enables people to announce an emergency they’re observing in real-time. Because of this, more agencies are interested in programatically monitoring Twitter (i.e. disaster relief organizations and news agencies).</p>
+
+<p>But, it’s not always clear whether a person’s words are actually announcing a disaster. Take this example:</p>
+
+<p><img src="../../assets/images/fake_disaster_tweet.png" alt="fake disaster tweet" /></p>
+
+<p>The author explicitly uses the word “ABLAZE” but means it metaphorically. This is clear to a human right away, especially with the visual aid. But it’s less clear to a machine.</p>
+
+<p>In this competition, we’re challenged to build a machine learning model that predicts which Tweets are about real disasters and which one’s aren’t.</p>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>In <a href="/blog/real-disaster-tweets/">Part 1 of this project</a>, I covered 1) the architecture of Transformer model, 2) solving this problem using pre-trained Transformer LM, 3) the result and some analysis of the result. After I was done using the pre-trained model, I was curious if homemade model would behave better, so I started from the ground up by building the encoder architecture, train it, and fine-tuning using various different combinations of hypter-parameters. I also added text-preprocessing. It turns out the model can render to be 2.5-3% higher than using pre-trained model using a much smaller model, a 5-fold Stratified Cross Validation, and saving models at each epoch if it’s the best model seen so far depending on validation accuracy.</p>
+
+<h2 id="the-algorithm">The Algorithm</h2>
+
+<p>First the data is preprocessed by transforming each words to lowercase, strippping stopwords, html, numbers, punctuations, etc. Then, each word is lemmatized using <code class="language-plaintext highlighter-rouge">WordNetLemmatizer</code> from the package <code class="language-plaintext highlighter-rouge">nltk</code>. Moreover, I limited the tweets to only containing the top 17k most common words, set max length of tweets to 16 words, transformed words to ids:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">vocab_size</span> <span class="o">=</span> <span class="mi">17000</span>  <span class="c1"># Only consider the top 17k words
+</span><span class="n">maxlen</span> <span class="o">=</span> <span class="mi">16</span>  <span class="c1"># Only consider the first 16 words of each tweet
+</span>
+<span class="n">train_data</span> <span class="o">=</span> <span class="n">train_data</span><span class="p">.</span><span class="nf">fillna</span><span class="p">(</span><span class="sh">''</span><span class="p">)</span>
+<span class="n">train_data</span><span class="p">[</span><span class="sh">'</span><span class="s">text</span><span class="sh">'</span><span class="p">]</span><span class="o">=</span><span class="n">train_data</span><span class="p">[</span><span class="sh">'</span><span class="s">text</span><span class="sh">'</span><span class="p">].</span><span class="nf">apply</span><span class="p">(</span><span class="n">clean_text</span><span class="p">)</span>  <span class="c1"># Strips html, numbers, punctuations, etc.
+</span><span class="n">train_data</span><span class="p">[</span><span class="sh">'</span><span class="s">text</span><span class="sh">'</span><span class="p">]</span> <span class="o">=</span> <span class="n">train_data</span><span class="p">[</span><span class="sh">'</span><span class="s">text</span><span class="sh">'</span><span class="p">].</span><span class="nf">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="sh">'</span><span class="s"> </span><span class="sh">'</span><span class="p">.</span><span class="nf">join</span><span class="p">([</span><span class="n">word</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">x</span><span class="p">.</span><span class="nf">split</span><span class="p">()</span> <span class="k">if</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="n">stop</span><span class="p">)]))</span>  <span class="c1"># Stripes stop words
+</span><span class="n">train_data</span><span class="p">[</span><span class="sh">'</span><span class="s">text</span><span class="sh">'</span><span class="p">]</span><span class="o">=</span><span class="n">train_data</span><span class="p">[</span><span class="sh">'</span><span class="s">text</span><span class="sh">'</span><span class="p">].</span><span class="nf">apply</span><span class="p">(</span><span class="n">preprocessdata</span><span class="p">)</span>  <span class="c1"># Lemmatization
+</span>
+
+<span class="c1"># The location and keyword for each tweets are available in some rows
+# Concatenate to take those into account
+</span><span class="n">spaces</span> <span class="o">=</span> <span class="p">[</span><span class="sh">'</span><span class="s"> </span><span class="sh">'</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nf">len</span><span class="p">(</span><span class="n">train_data</span><span class="p">.</span><span class="n">location</span><span class="p">))]</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">train_data</span><span class="p">.</span><span class="n">text</span> <span class="o">+</span> <span class="n">spaces</span> <span class="o">+</span> <span class="n">train_data</span><span class="p">.</span><span class="n">location</span> <span class="o">+</span> <span class="n">spaces</span> <span class="o">+</span> <span class="n">train_data</span><span class="p">.</span><span class="n">keyword</span>
+
+
+<span class="c1"># word2id
+</span><span class="n">frequent_words</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nc">Series</span><span class="p">(</span><span class="sh">'</span><span class="s"> </span><span class="sh">'</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="n">X</span><span class="p">).</span><span class="nf">split</span><span class="p">()).</span><span class="nf">value_counts</span><span class="p">()[:</span><span class="n">vocab_size</span><span class="p">]</span>
+<span class="n">vocabulary</span> <span class="o">=</span> <span class="n">frequent_words</span><span class="p">.</span><span class="nf">keys</span><span class="p">().</span><span class="nf">tolist</span><span class="p">()</span>
+<span class="k">def</span> <span class="nf">map2vocab_index</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="n">word_indices</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">asarray</span><span class="p">([</span><span class="n">vocabulary</span><span class="p">.</span><span class="nf">index</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">text</span><span class="p">.</span><span class="nf">split</span><span class="p">()</span> <span class="k">if</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">vocabulary</span><span class="p">]).</span><span class="nf">astype</span><span class="p">(</span><span class="sh">'</span><span class="s">float32</span><span class="sh">'</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">word_indices</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="p">.</span><span class="nf">apply</span><span class="p">(</span><span class="n">map2vocab_index</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">asarray</span><span class="p">(</span><span class="n">train_data</span><span class="p">.</span><span class="n">target</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>If we look into the length of each input a little bit, we would find this:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">length</span> <span class="o">=</span> <span class="p">[</span><span class="nf">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">X</span><span class="p">]</span>
+<span class="n">pd</span><span class="p">.</span><span class="nc">Series</span><span class="p">(</span><span class="n">length</span><span class="p">).</span><span class="nf">describe</span><span class="p">()</span>
+
+<span class="c1"># &gt; output
+# count    7613.000000
+# mean       11.196769
+# std         3.854303
+# min         1.000000
+# 25%         8.000000
+# 50%        11.000000
+# 75%        14.000000
+# max        27.000000
+# dtype: float64
+</span>
+<span class="n">pd</span><span class="p">.</span><span class="nc">Series</span><span class="p">(</span><span class="n">length</span><span class="p">).</span><span class="nf">quantile</span><span class="p">(</span><span class="mf">0.9</span><span class="p">)</span>
+<span class="c1"># &gt; 16.0    # 90% quantile of the input length
+</span></code></pre></div></div>
+
+<p>And this is the reason why the above <code class="language-plaintext highlighter-rouge">maxlen</code> is chosen – because 90% of the texts have less than 16 words after preprocessing, and we don’t want all the extra zeros when we are doing the padding, which is done by the below code. with <code class="language-plaintext highlighter-rouge">train_test_split()</code>:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">X_train</span><span class="p">,</span> <span class="n">X_val</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_val</span> <span class="o">=</span> <span class="nf">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.33</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="n">X_train</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">preprocessing</span><span class="p">.</span><span class="n">sequence</span><span class="p">.</span><span class="nf">pad_sequences</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">maxlen</span><span class="o">=</span><span class="n">maxlen</span><span class="p">)</span>
+<span class="n">X_val</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">preprocessing</span><span class="p">.</span><span class="n">sequence</span><span class="p">.</span><span class="nf">pad_sequences</span><span class="p">(</span><span class="n">X_val</span><span class="p">,</span> <span class="n">maxlen</span><span class="o">=</span><span class="n">maxlen</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Peeking into the feature validation set, we got what we expected:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">X_val</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
+
+<span class="c1"># &gt; output
+# array([[   0,    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
+#            8,   40,  261,  159,  159],
+#        [   0,    0,    0,    0,    0,    0,    0,    0,    0,  172,   52,
+#          119,   64, 1880, 5586,  119]], dtype=int32)
+</span></code></pre></div></div>
+
+<p>Now we just need to build, compile and fit the model. The following two classes would be the building blocks of our model:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">TokenAndPositionEmbedding</span><span class="p">(</span><span class="n">Layer</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">maxlen</span><span class="p">,</span> <span class="n">vocab_size</span><span class="p">,</span> <span class="n">embed_dim</span><span class="p">):</span>
+        <span class="nf">super</span><span class="p">(</span><span class="n">TokenAndPositionEmbedding</span><span class="p">,</span> <span class="n">self</span><span class="p">).</span><span class="nf">__init__</span><span class="p">()</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">token_emb</span> <span class="o">=</span> <span class="nc">Embedding</span><span class="p">(</span><span class="n">input_dim</span><span class="o">=</span><span class="n">vocab_size</span><span class="p">,</span> <span class="n">output_dim</span><span class="o">=</span><span class="n">embed_dim</span><span class="p">)</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">pos_emb</span> <span class="o">=</span> <span class="nc">Embedding</span><span class="p">(</span><span class="n">input_dim</span><span class="o">=</span><span class="n">maxlen</span><span class="p">,</span> <span class="n">output_dim</span><span class="o">=</span><span class="n">embed_dim</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">call</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="n">maxlen</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">shape</span><span class="p">(</span><span class="n">x</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">positions</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="n">maxlen</span><span class="p">,</span> <span class="n">delta</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">positions</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="nf">pos_emb</span><span class="p">(</span><span class="n">positions</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="nf">token_emb</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">positions</span>
+
+<span class="k">class</span> <span class="nc">TransformerBlock</span><span class="p">(</span><span class="n">Layer</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">embed_dim</span><span class="p">,</span> <span class="n">num_heads</span><span class="p">,</span> <span class="n">ff_dim</span><span class="p">,</span> <span class="n">rate</span><span class="o">=</span><span class="mf">0.5</span><span class="p">):</span>
+        <span class="nf">super</span><span class="p">(</span><span class="n">TransformerBlock</span><span class="p">,</span> <span class="n">self</span><span class="p">).</span><span class="nf">__init__</span><span class="p">()</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">att</span> <span class="o">=</span> <span class="nc">MultiHeadAttention</span><span class="p">(</span><span class="n">num_heads</span><span class="o">=</span><span class="n">num_heads</span><span class="p">,</span> <span class="n">key_dim</span><span class="o">=</span><span class="n">embed_dim</span><span class="p">)</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">dropout1</span> <span class="o">=</span> <span class="nc">Dropout</span><span class="p">(</span><span class="n">rate</span><span class="p">)</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">layernorm1</span> <span class="o">=</span> <span class="nc">LayerNormalization</span><span class="p">(</span><span class="n">epsilon</span><span class="o">=</span><span class="mf">1e-6</span><span class="p">)</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">ffn</span> <span class="o">=</span> <span class="nc">Sequential</span><span class="p">(</span>
+            <span class="p">[</span><span class="nc">Dense</span><span class="p">(</span><span class="n">ff_dim</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="sh">"</span><span class="s">relu</span><span class="sh">"</span><span class="p">),</span>
+             <span class="nc">Dense</span><span class="p">(</span><span class="n">embed_dim</span><span class="p">),]</span>
+        <span class="p">)</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">dropout2</span> <span class="o">=</span> <span class="nc">Dropout</span><span class="p">(</span><span class="n">rate</span><span class="p">)</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">layernorm2</span> <span class="o">=</span> <span class="nc">LayerNormalization</span><span class="p">(</span><span class="n">epsilon</span><span class="o">=</span><span class="mf">1e-6</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">call</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">inputs</span><span class="p">,</span> <span class="n">training</span><span class="p">):</span>
+        <span class="n">attn_output</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="nf">att</span><span class="p">(</span><span class="n">inputs</span><span class="p">,</span> <span class="n">inputs</span><span class="p">)</span>
+        <span class="n">attn_output</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="nf">dropout1</span><span class="p">(</span><span class="n">attn_output</span><span class="p">,</span> <span class="n">training</span><span class="o">=</span><span class="n">training</span><span class="p">)</span>
+        <span class="n">out1</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="nf">layernorm1</span><span class="p">(</span><span class="n">inputs</span> <span class="o">+</span> <span class="n">attn_output</span><span class="p">)</span>
+        <span class="n">ffn_output</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="nf">ffn</span><span class="p">(</span><span class="n">out1</span><span class="p">)</span>
+        <span class="n">ffn_output</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="nf">dropout2</span><span class="p">(</span><span class="n">ffn_output</span><span class="p">,</span> <span class="n">training</span><span class="o">=</span><span class="n">training</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="nf">layernorm2</span><span class="p">(</span><span class="n">out1</span> <span class="o">+</span> <span class="n">ffn_output</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>As you can see they matches the Transformer architecture we discussed in Part 1. If you need a refresher, <a href="/blog/real-disaster-tweets/">here</a> is the last article. Now we just need to actually build the model, so we have:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">embed_dim</span> <span class="o">=</span> <span class="mi">64</span>  <span class="c1"># Embedding size for each token
+</span><span class="n">num_heads</span> <span class="o">=</span> <span class="mi">4</span>  <span class="c1"># Number of attention heads
+</span><span class="n">ff_dim</span> <span class="o">=</span> <span class="mi">256</span>  <span class="c1"># Hidden layer size in feed forward network inside transformer
+</span>
+<span class="k">def</span> <span class="nf">get_model</span><span class="p">():</span>
+    <span class="n">inputs</span> <span class="o">=</span> <span class="nc">Input</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">maxlen</span><span class="p">,))</span>
+    <span class="n">embedding_layer</span> <span class="o">=</span> <span class="nc">TokenAndPositionEmbedding</span><span class="p">(</span><span class="n">maxlen</span><span class="p">,</span> <span class="n">vocab_size</span><span class="p">,</span> <span class="n">embed_dim</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nf">embedding_layer</span><span class="p">(</span><span class="n">inputs</span><span class="p">)</span>
+    <span class="n">transformer_block</span> <span class="o">=</span> <span class="nc">TransformerBlock</span><span class="p">(</span><span class="n">embed_dim</span><span class="p">,</span> <span class="n">num_heads</span><span class="p">,</span> <span class="n">ff_dim</span><span class="p">,</span> <span class="n">rate</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nf">transformer_block</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="c1"># transformer_block2 = TransformerBlock(embed_dim, num_heads, ff_dim, rate = 0.1)
+</span>    <span class="c1"># x = transformer_block2(x)
+</span>    <span class="n">x</span> <span class="o">=</span> <span class="nc">GlobalAveragePooling1D</span><span class="p">()(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nc">Dropout</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nc">Dense</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="sh">"</span><span class="s">relu</span><span class="sh">"</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nc">Dropout</span><span class="p">(</span><span class="mf">0.3</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">outputs</span> <span class="o">=</span> <span class="nc">Dense</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="sh">"</span><span class="s">sigmoid</span><span class="sh">"</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="nc">Model</span><span class="p">(</span><span class="n">inputs</span><span class="o">=</span><span class="n">inputs</span><span class="p">,</span> <span class="n">outputs</span><span class="o">=</span><span class="n">outputs</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>It’s easy to see that for this model, we have several model parameters to tweak around with. The table below are the values I tried corresponding to each of those paramaters.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td># of transformer blocks</td>
+      <td>1, 2, 3, 6</td>
+    </tr>
+    <tr>
+      <td>Embedding Dimension</td>
+      <td>32, 64, 100, 128, 256, 512</td>
+    </tr>
+    <tr>
+      <td># of attention heads</td>
+      <td>2, 4, 8</td>
+    </tr>
+    <tr>
+      <td>Hiden Layer Dimension</td>
+      <td>64, 128, 256, 512, 1024, 2048</td>
+    </tr>
+    <tr>
+      <td>Dropout Rate</td>
+      <td>0.1, 0.2, 0.3, 0.4, 0.5</td>
+    </tr>
+    <tr>
+      <td>Learning Rate</td>
+      <td>1e-5, 5e-5, 1e-4</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>By experimenting with different combinations and reading other people’s takes and results, I finally chose the values in the code block shown above since it seems to work the best with this problem specifically. I spent the majority of my time tuning the model architecture using these possible parameter values, repeating a few times with each set of value combinations to try verify the results. It’s really fun and after a few times you can see that there is definitely patterns to it. For example, this is hardly a big or medium dataset, and if the model is too complex it can’t even acheive our previous accuracy 75%. Setting Hidden Layer Dimension to be 512 and # of attention heads to 2 usually do the trick and gave us resulting accuracy comparable to our pre-trained model, that is, 75%. Embedding Dimension that is larger than 100 usually make the model worse. More than 2 transformer block also make it worse. Considering that input sequences have at max 16 words, and the dataset is quite small, it’s preferable to have small models to avoid overfitting. At last, a learning rate of 1e-4 is shown to have better performance than 1e-5 or 5e-5 and is therefore chosen.</p>
+
+<p>Below is my code to train the model. The actual code is long and hard to read, so I just showed the most important code here. Full source code is attached in the end. Following the best practices, I used 5-fold Stratified Cross Validation to build 5 different models, and later predict using their average output. It saves the model on each epoch if it’s the best model seen so far based on validation accuracy. It will also stop early if the model stopped improving.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">train_indices</span><span class="p">,</span> <span class="n">val_indices</span> <span class="ow">in</span> <span class="nc">StratifiedKFold</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">).</span><span class="nf">split</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">):</span>
+
+    <span class="c1"># ...
+</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="nf">get_model</span><span class="p">()</span>
+    <span class="n">model</span><span class="p">.</span><span class="nf">compile</span><span class="p">(</span><span class="n">optimizer</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">optimizers</span><span class="p">.</span><span class="nc">Adam</span><span class="p">(</span><span class="mf">1e-4</span><span class="p">),</span>
+                    <span class="n">loss</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">losses</span><span class="p">.</span><span class="nc">BinaryCrossentropy</span><span class="p">(),</span> <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="sh">"</span><span class="s">accuracy</span><span class="sh">"</span><span class="p">])</span>
+
+    <span class="n">early_stop</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">callbacks</span><span class="p">.</span><span class="nc">EarlyStopping</span><span class="p">(</span><span class="n">patience</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+    <span class="n">model_checkpoint</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">callbacks</span><span class="p">.</span><span class="nc">ModelCheckpoint</span><span class="p">(</span><span class="n">model_checkpoint_path</span><span class="p">,</span> <span class="n">monitor</span><span class="o">=</span><span class="sh">"</span><span class="s">val_accuracy</span><span class="sh">"</span><span class="p">,</span> <span class="n">save_best_only</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">save_weights_only</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+    <span class="n">history</span> <span class="o">=</span> <span class="n">model</span><span class="p">.</span><span class="nf">fit</span><span class="p">(</span><span class="n">train_features</span><span class="p">,</span> <span class="n">train_targets</span><span class="p">,</span> <span class="n">validation_data</span><span class="o">=</span><span class="p">(</span><span class="n">validation_features</span><span class="p">,</span> <span class="n">validation_targets</span><span class="p">),</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">callbacks</span><span class="o">=</span><span class="p">[</span><span class="n">early_stop</span><span class="p">,</span> <span class="n">model_checkpoint</span><span class="p">])</span>
+</code></pre></div></div>
+
+<h2 id="result-and-discussion">Result and Discussion</h2>
+
+<p>The final model improved ~75% accuracy to ~78.5% accuracy and boosted my rank up +200. The only thing is that the Transformer in its original form is most suitable for output sequence generation such as Machine Translation, but this is a classification problem. For this kind of problem, it’s better to use a pre-trained variation of the BERT model, of which the objective is to give a good representation of the sequence for downstream application, in our case a classification problem. BERT is pre-trained as a Masked Language Model(50% of the time) and using Next Sentence Prediction(the other 50%). BERT pre-trained models are great for transfering learning use cases like this. In fact, every Kaggle notebook that used the original Transformer model has an accuracy equal or less than 80%, however, every solution on the first page that used BERT has easily at least 82.5% accuracy. It’s not a difficult task to port a BERT model into my solution – I just need to use a tokenizer and then build some Feed Forward Network upon the BERT representation. However, my solution is already pretty long and dense, so I skipped it for now – I’ll use BERT in my next project. I already have an idea of what I want to do. On the other hand, I also want to incorporate some tools to automate experimentation and to version my models and predictions: manual experimentation is chaotic and without documentation, which was a big problem I had in this project.</p>
+
+<p>I learned a lot about fine-tuning through this experience, and have read tutorials, documentations, and implementation codes. It’s been a great learning experience, and now I feel much more comfortable developing ML models using Tensorflow and Keras and has a crude sense of model complexity and performance that needs to be improved upon still. Hope you find something interesting or useful in this article as well.</p>
+
+<h2 id="source-code">Source Code</h2>
+
+<p><a href="https://www.kaggle.com/code/tianyimasf/real-disaster-tweets-prediction-with-transformer">Kaggle</a> <a href="https://github.com/tianyimasf/kaggle/blob/main/real-disaster-tweets-prediction-with-transformer.ipynb">Github</a></p>
+
+<h2 id="references">References</h2>
+
+<ol>
+  <li>Transformers For Text Classification: https://blog.paperspace.com/transformers-text-classification</li>
+  <li>Kaggle, Transformer Encoder for Classification in Pytorch: https://www.kaggle.com/code/zhuyuqiang/transformer-encoder-for-classification-in-pytorch</li>
+  <li>Kaggle, Disaster Tweets Classification: Transformer: https://www.kaggle.com/code/lonnieqin/disaster-tweets-classification-transformer</li>
+</ol>]]></content><author><name>Alex Ma</name></author><category term="projects" /><category term="tutorials" /><summary type="html"><![CDATA[Background]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/fake_disaster_tweet.png" /><media:content medium="image" url="http://localhost:4000/assets/images/fake_disaster_tweet.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Real Disaster Tweets Classification: A Multi-head Attention Tutorial with Application</title><link href="http://localhost:4000/blog/real-disaster-tweets/" rel="alternate" type="text/html" title="Real Disaster Tweets Classification: A Multi-head Attention Tutorial with Application" /><published>2023-03-19T00:00:00-06:00</published><updated>2023-03-19T00:00:00-06:00</updated><id>http://localhost:4000/blog/real-disaster-tweets</id><content type="html" xml:base="http://localhost:4000/blog/real-disaster-tweets/"><![CDATA[<h2 id="background">Background</h2>
+
+<p>Twitter has become an important communication channel in times of emergency.</p>
+
+<p>The ubiquitousness of smartphones enables people to announce an emergency they’re observing in real-time. Because of this, more agencies are interested in programatically monitoring Twitter (i.e. disaster relief organizations and news agencies).</p>
+
+<p>But, it’s not always clear whether a person’s words are actually announcing a disaster. Take this example:</p>
+
+<p><img src="../../assets/images/fake_disaster_tweet.png" alt="fake disaster tweet" /></p>
+
+<p>The author explicitly uses the word “ABLAZE” but means it metaphorically. This is clear to a human right away, especially with the visual aid. But it’s less clear to a machine.</p>
+
+<p>In this competition, we’re challenged to build a machine learning model that predicts which Tweets are about real disasters and which one’s aren’t.</p>
+
+<h2 id="motivation">Motivation</h2>
+
+<p>I have always know various ML NLP algorithms, but haven’t used them in a real dataset outside of a classroom setting. When I saw this competition in Kaggle, I thought it would be a great opportunity for me to read the original paper and online resources about and deepen my understanding of the model behind recent LLM(Large Language Model), Tranformer, and learn to implement and customize it for this specific task.</p>
+
+<h2 id="how-transformer-works">How Transformer Works</h2>
+
+<p>For this competition, I started by researching and understanding the details of the Transformer architecture. The most important component of this architecture is the multi-head attention mechanism.</p>
+
+<h3 id="what-is-the-attention-mechanism-and-how-its-used-in-transformer">What is the attention mechanism and how it’s used in Transformer</h3>
+
+<p>The attention mechanism takes its input in the form of three parameters, known as Query($Q$), Key($K$) and Value($V$). They come in the format of matrices with dimensions $Embed_{size} \times Embed_{size}$. The Transformer model uses three kinds of attention mechanisms:</p>
+
+<ol>
+  <li>Self-attention in the Encoder — the input sequence pays attention to itself</li>
+  <li>Self-attention in the Decoder — the target sequence pays attention to itself</li>
+  <li>Encoder-Decoder-attention in the Decoder — the target sequence pays attention to the input sequence</li>
+</ol>
+
+<p>The main idea of Query, Key and Value is drawn from informtation retrieval. For example, if you are searching for YouTube videos, and put in a few key words($Q$), the search engine look for similar tag words($K$), and return videos($V$) associated with those tags. The three attention parameter matrices: Query, Key and Value, are the backbone of the attention mechanism. Remember the big three!</p>
+
+<h3 id="self-attention-in-the-encoder">Self-attention in the Encoder</h3>
+
+<p>First, each input sequence is converted to an input embedding and a positional embedding. Combining these two embeddings creates a vector representation of the sequence that captures the semantic and positional meaning of the sequence. Then, this vector representation is fed into all three of the attention parameter matrices, Query, Key and Value for the first self-attention block – $W_{q}$, $W_{k}$ and $W_{v}$, and produces a new encoded representation which now incorporates the attention scores of the first self-attention block for each word in the sequence. Passing through the rest of the self-attention blocks in the Encoder, each of the blocks adds their own attention scores for each words as well.</p>
+
+<h3 id="self-attention-in-the-decoder">Self-attention in the Decoder</h3>
+
+<p>Same process as self-attention in the Encoder, except in training phase we process the target sequence same as the input sequence and feed that into all three attention parameter matrices. In inference phase, we start out by feeding the start of sentence token into the attention blocks and generate the next words repeatedly.</p>
+
+<h3 id="encoder-decoder-attention-in-the-decoder">Encoder-Decoder-attention in the Decoder</h3>
+
+<p>Same thing except the output of the encoder is fed into the Key and Value parameter matrices, and the output from the last self-attention block in the decoder is fed into the Query parameter matrix. The encoder-decoder-attention thus get a representation that captures the influence of both of the target and input sequence. More specifically, it gets the attention score of each of the target sequence representation words influenced by the attention scores, semantic and positional meanings of the input sequence words.</p>
+
+<p>As the data flows through self-attention and encoder-Decoder-attention blocks in the Decoder, each block adds their attention scores to the output representation.</p>
+
+<h3 id="the-multi-head-attention">The “Multi-head” Attention</h3>
+
+<p>When the attention mechanism uses multiple heads, it means that the three attention parameter matrices in each attention block are each sliced into N smaller matrices with the same dimention $Embed_{size} \times (\dfrac{Embed_{size}}{N})$. In reality, the matrices are not actually decoupled into N different matrices, but conceptually different heads compute in different sections of the matrix and encode multiple relationships and aspects for each word. So the parameter martices $W_{q}$, $W_{k}$, and $W_{v}$ will look like this:</p>
+
+<p><img src="../../assets/images/transformer_wq.webp" alt="transformer wq" /></p>
+
+<p>Notice the relationship between $Embed_{size}$, $Query_{size}$ and Number of Attention Heads $N$ is $Query_{size} = \dfrac{Embed_{size}}{N}$</p>
+
+<h3 id="what-exactly-happens-inside-the-attention-blocks">What exactly happens inside the attention blocks?</h3>
+
+<p>The three attention parameter matrices are linear layers. In the encoder self-attention blocks, the input sequence is processed and passed through these linear layers to produce the $Q$, $K$, and $V$ matrices, like so:</p>
+
+<p><img src="../../assets/images/transformer_linear_layer.webp" alt="transformer linear layer" /></p>
+
+<p>The Q, K, and V matrices output by the linear layers are reshaped to include an explicit Head dimension. After then swaping the Head and Sequence dimention, we can now logically seperate the matrix into N Q matrices, one for each head.</p>
+
+<p><img src="../../assets/images/reshape_QKV.webp" alt="reshape_QKV" /></p>
+
+<p>The complete attention score then can be calculated in the Encoder self-attention:</p>
+
+<p><img src="../../assets/images/transformer_attention_score.webp" alt="transformer attention score" /></p>
+
+<p>It first multiplie $Q$ with $K^{T}$, and then apply a mask of dimention $(seq - 1) \times (seq - 1)$ in order to mask out the padding word. It then applies a softmax to the matrix multiplication result divided by $\sqrt{Query_{size}}$, and multiply $V$ with the result as the final attention score.</p>
+
+<p>Finally, we reshape the attention scores for all attention heads by basically reversing the reshaping process we’ve done before. This effectively merges all attention scores together and getting the encoded representation that captures the attention scores, semantic and positional meaning of the words.</p>
+
+<p><img src="../../assets/images/reshape_attention_score.webp" alt="reshape_attention_score" /></p>
+
+<p>Putting it together, this is the complete workflow of the multi-headed attention block.</p>
+
+<p><img src="../../assets/images/transformer_self_attention_architecture.webp" alt="transformer self attention architecture" /></p>
+
+<p>The decoder self-attention and encoder-decoder-attention blocks are the same except with differently-shaped attention masks to mask out the padding token.</p>
+
+<h2 id="the-program">The Program</h2>
+
+<p>Once I felt like I understood how Transformer works, I just want to test it out and see it in action. First we need to do some simple exploratory analysis and preprocessing, but I want to minimize this and get to the training stage quickly. I took a look at some of the tweets, and processed them by concatenating the location and keyword attribute in the end of the sentence. There are so many more ways I can preprocess the data better, including stripping stop words, numbers, HTML tags, punctuations and others, and converting to lower case. I left it as it is for now.</p>
+
+<p>Then I mostly followed <a href="https://blog.paperspace.com/transformers-text-classification/">this amazing tutorial</a> to implement a pre-trained Transformer model. The challenge is to customize the code to this use case. The first difference is the data source. In the tutorial the author imported data from the tfds library, which I think is a variation of Dataset type in Tensorflow that is not directly accessible and need to use library functions like <code class="language-plaintext highlighter-rouge">next()</code> and <code class="language-plaintext highlighter-rouge">batch()</code>, where as my data is a dataframe loaded from csv. I have to figure out the correct way to convert a dataframe to the correct Dataset type, which took me relatively a long time to solve. Moreover, the conversion needs to happen not only to the training dataset, but also to the testing dataset. Thus, when predicting, I called <code class="language-plaintext highlighter-rouge">model.predict(test_data.batch(1))</code> instead of <code class="language-plaintext highlighter-rouge">model.predict(test_data)</code>, which is a little ugly but get the work done. Finally, a sigmoid function is applied to the predictions, so that the predictions falls between 0 and 1 and rounded up or down to a binary result as the final classification.</p>
+
+<h2 id="result">Result</h2>
+
+<p>Without any further customized fine-tuning and data preprocessing, the model acheived an accuracy score of 0.75758 on the test dataset. In the training set, according to the numbers, the expected accuracy of a random classifier would be around half and half. So my classifier is much better than the random classifier to predict correctly.</p>
+
+<h2 id="future-steps">Future Steps</h2>
+
+<p>I want to work on it a bit more in the future to explore text data preparation and handmaking a Transformer model. Following a different section of the above mentioned article and other notebooks should serve as a good first step. Besides, I also want to try fine-tuning the model, see how different hyperparameters affect the model accuracy, and how other training strategies like using 5-fold Stratified Cross Validation to affect the model outcome. In <a href="/pages/article/3.html">the next article</a>, I discuss this work, and how I improved the model accuracy from 0.75758 to a consistent and reproducable ~0.786.</p>
+
+<p><img src="../../assets/images/real_disaster_leaderboard.PNG" alt="leaderboard" /></p>
+
+<p>The pre-contest research, learning about Tensorflow and making sense of the data type took the most time. I feel like I learned a lot from this project, and hope you enjoyed my blog too! Feel free to comment if you have any thoughts.</p>
+
+<h2 id="source-code">Source Code</h2>
+
+<p><a href="https://www.kaggle.com/code/tianyimasf/real-disaster-tweets-prediction-with-transformer">Kaggle</a> <a href="https://github.com/tianyimasf/kaggle/blob/main/real-disaster-tweets-prediction-with-transformer.ipynb">Github</a></p>
+
+<h2 id="reference">Reference</h2>
+
+<p>Ketan Doshi, <a href="https://towardsdatascience.com/transformers-explained-visually-part-3-multi-head-attention-deep-dive-1c1ff1024853">Transformers Explained Visually (Part 3): Multi-head Attention, deep dive</a></p>
+
+<p>KiKaBeN, <a href="https://kikaben.com/transformers-encoder-decoder/#:~:text=The%20transformer%20uses%20an%20encoder,an%20output%20sentence%20(translation).">Transformer’s Encoder-Decoder</a></p>
+
+<p>Bharath K, <a href="https://blog.paperspace.com/transformers-text-classification/">Transformers For Text Classification</a></p>]]></content><author><name>Alex Ma</name></author><category term="projects" /><category term="tutorials" /><summary type="html"><![CDATA[Background]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/transformer_wq.webp" /><media:content medium="image" url="http://localhost:4000/assets/images/transformer_wq.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Long Range Extreme Weather Forecasting</title><link href="http://localhost:4000/blog/weather-forcasting/" rel="alternate" type="text/html" title="Long Range Extreme Weather Forecasting" /><published>2023-03-15T00:00:00-06:00</published><updated>2023-03-15T00:00:00-06:00</updated><id>http://localhost:4000/blog/weather-forcasting</id><content type="html" xml:base="http://localhost:4000/blog/weather-forcasting/"><![CDATA[<h2 id="background">Background</h2>
+
+<p>The WiDS Datathon 2023 focuses on a prediction task involving forecasting sub-seasonal temperatures (temperatures over a two-week period, in our case) within the United States. They used a pre-prepared dataset consisting of weather and climate information for a number of US locations, for a number of start dates for the two-week observation, as well as the forecasted temperature and precipitation from a number of weather forecast models. Each row in the data corresponds to a single location and a single start date for the two-week period. The task is to predict the arithmetic mean of the maximum and minimum temperature, for each location and start date.</p>
+
+<h2 id="motivation">Motivation</h2>
+
+<p>This is my official first full data science project(and this is my first technical blog! Yay!) I was looking for data science activties to join, and I got to know that Stanford is hosting a Women in Data Science conference, along with their datathon which is branded as open to all levels. This is a great execuse to get access to a well-curated, structured dataset, with a good question, and just start to get hands dirty. Besides, climate change is an important issue so I want to give it a try.</p>
+
+<h2 id="solution">Solution</h2>
+
+<p>My solution first preprocess the data. It first solve location discrepencies by scaling the longitude and latitutde, then one-hot encoding categorical data, splitting date feature into 3 numerical variables, filling missing values, removing outliers and power transforming skewed data. Finally, I run Adverserial Validation to check if for each variable the training data distribution matches the test data distribution, then removed a couple features where there is a concept drift.</p>
+
+<p>For training I used an algorithm for gradient boosting on decision trees: <a href="https://arxiv.org/abs/1706.09516">Catboost</a>, optimized by Bayesian Optimization, which in one sentence picks the next parameter value based on the performance of previous parameter value. In the end I also visualized feature importance to gain further insights into the trained model.</p>
+
+<p>Finally, the training RMSE for our model is 0.40107, 0.39942 for the validation set, and 1.222 for the test set. It’s on top 50% in the competition.</p>
+
+<h2 id="challenges">Challenges</h2>
+
+<p>My challenges in building this solution is in data preprocessing. Specifically, I was learning the correct way to:</p>
+
+<ul>
+  <li>Tranform skewed data</li>
+  <li>Remove outliers</li>
+  <li>Check if distributions of training set are similar to test set</li>
+</ul>
+
+<p>The first challenge to transform skewed data is to determine whether it’s feasible in this contest. If the training data is transformed to be used for training, then the test set also needs to be transformed before making predictions. After verifying that this is indeed the case, I made sure that the test set is given to us to be used. Then, I found the variables that’s skewed, and investigated different transform methods, including Min Max Scaler, log and power transform, and used KDE plot to verify the findings and results. Because some of the data is negative, log transform can’t be used, and power transform looked better.</p>
+
+<p>For removing outliers, I used Tukey’s method. I compared different implementations, and picked one that looked the most clean and intuitive to me.</p>
+
+<p>For checking if distributions of training set are similar to test set, I tried the algorithm suggested in this <a href="https://medium.com/@praveenkotha/how-to-find-whether-train-data-and-test-data-comes-from-same-data-distribution-9259018343b">medium article</a>, except its last(4th) step is incorrect: a classifier needs to be trained using cross validation on the entire dataset, instead of the training data, because the label of the training data will be homogeneously 1. Based on this reason, I adopted <a href="https://www.kaggle.com/code/kooaslansefat/wids-2023-woman-life-freedom">this implementation</a> of the algorithm and it works perfectly.</p>
+
+<h2 id="non-technical-challenge">Non-technical Challenge</h2>
+
+<p>Before all the technicals happened, there is also a non-technical challenge, which by no means is easier and actually took me some time. Before data preprocessing, I felt the need to understand the meanings of the data given, so I actually spent a lot of my time looking through the documentation on the Kaggle website. In their Data tab the descriptions are only halvely complete. For example, almost half of the variables have name postfixed by a number, but the documentation never explained the meaning of the numbers – maybe it’s days, but then why they have different range? It left me very confused. In the end, I gained some understandings, but not complete. I’d imagine this might get easier as one gradually gains expertise in climate science, or simply have start the project from scratch and thus have access to the data source.</p>
+
+<h2 id="future-steps">Future Steps</h2>
+
+<p>The data is well-preprocessed, however, the model isn’t fine-tuned. One future step could be to fine-tune the model and maybe try different optimizers like Adam.</p>
+
+<p>Secondly, there are more models that could fit this dataset. I can choose some of those, compare the results and use the essemble method to improve RMSE.</p>
+
+<h2 id="source-code">Source Code</h2>
+
+<p>Since a lot happened in the source code, I’m not attaching any code snippet here. If you are interested in checking it out, <a href="https://github.com/tianyimasf/kaggle/blob/main/wids-datathon-tianyi-yukyung-and-irsa.ipynb">here</a> is the full code for this project.</p>
+
+<p>That’s all! Hope you enjoyed, and feel free to comment below if you have any thoughts!</p>]]></content><author><name>Alex Ma</name></author><category term="projects" /><category term="tutorials" /><summary type="html"><![CDATA[Background]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/corr_heatmap_WiDS.png" /><media:content medium="image" url="http://localhost:4000/assets/images/corr_heatmap_WiDS.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

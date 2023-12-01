@@ -1,13 +1,14 @@
 ---
 name: Changing Colors
-tools: [P5.js, Processing, JavaScript]
 image: ../assets/images/moving_colors2.PNG
 description: A Manefestation of Mathematical Concepts and Functions through Colors
+date: 2023-08-10
+layout: post
 ---
 
 # Moving Colors
 
-[![Changing Colors](../assets/images/moving_colors2.PNG)](https://www.loom.com/share/32fc878ea18244a1b49478aae04f736c)
+[![Changing Colors](../../assets/images/moving_colors2.PNG)](https://www.loom.com/share/32fc878ea18244a1b49478aae04f736c)
 
 Colors, in first glance, seem to be a visual trait. However, it's computational representations are 3 numbers, each correspond with the amount of red, blue and green in one color. As a result, it's possible to apply mathematical functions to colors, and observe its effects.
 
@@ -17,4 +18,4 @@ The Beizer curve is a special kind of curve that takes in four points -- the sta
 
 This carefully crafted algorithm based on mathemcatical concepts produces what you can see in the website.
 
-[Website](https://tianyimasf.github.io/color-gradients) | [demo video](https://www.loom.com/share/32fc878ea18244a1b49478aae04f736c)
+[Website](https://tianyimasf.github.io/color-gradients) \| [Demo Video](https://www.loom.com/share/32fc878ea18244a1b49478aae04f736c)
