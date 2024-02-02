@@ -120,6 +120,12 @@ Finally, we can create out `Learner` object, which is a fastai object grouping d
 learn = Learner(dls, model, loss_func=CrossEntropyLossFlat(), cbs=[DropOutput], metrics=Perplexity()).to_fp16()
 ```
 
+Here we use `.to_fp16()` to tell the program to use mix-precision during training to speed up the process.
+
+Perplexity is a basic metric for evaluating language tasks. According to [this post](https://towardsdatascience.com/the-relationship-between-perplexity-and-entropy-in-nlp-f81888775ccc), perplexity, equivalently, the cross entropy, measures the amount of “randomness” in our model. If the perplexity is 3 (per word) then that means the model had a 1-in-3 chance of guessing (on average) the next word in the text. For this reason, it is sometimes called the average branching factor.
+
+In general, a perplexity score between 10 - 50 is really good. The state-of-the-art is around 10. The less the score is, the better the model. Also, it scales with the size of the text dataset. Worst case scenario, it equals to the size of vocabulary of the dataset.
+
 We can check how good the model is without any fine-tuning step:
 
 ![validate](../../assets/images/validate.PNG)
