@@ -21,11 +21,7 @@
 <lastmod>2023-03-18T00:00:00-06:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/projects/Disaster%20Tweets%20Classification/</loc>
-<lastmod>2023-04-28T00:00:00-06:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/projects/Project%20Star%20Gazing/</loc>
+<loc>http://localhost:4000/projects/VIsualizing%20stars%20in%20the%20universe/</loc>
 <lastmod>2023-05-12T00:00:00-06:00</lastmod>
 </url>
 <url>
@@ -55,6 +51,10 @@
 <url>
 <loc>http://localhost:4000/projects/My%20Spotify%20Data%20Analysis%20in%20SQL/</loc>
 <lastmod>2023-11-26T00:00:00-07:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/projects/Generating%20LinkedIn%20Bio%20using%20GPT2%20and%20Fastai/</loc>
+<lastmod>2024-01-31T00:00:00-07:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/categories/</loc>

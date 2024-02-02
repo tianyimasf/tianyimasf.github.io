@@ -45,7 +45,7 @@
 {
 "category": "",
 "title": "Weather forecasting",
-"description": "Long Range Extreme Weather ForecastingThe WiDS Datathon 2023 focuses on a pre...",
+"description": "Long Range Extreme Weather ForecastingThe WiDS Datathon 2023 asks participant...",
 "url": "/projects/Weather%20Forecasting/",
 "image": "../assets/images/corr_heatmap_WiDS.png",
 "author": ""
@@ -54,19 +54,9 @@
 
 {
 "category": "",
-"title": "Disaster tweets classification",
-"description": "Real Disaster Tweets PredictionTwitter has become an important communication ...",
-"url": "/projects/Disaster%20Tweets%20Classification/",
-"image": "../assets/images/real_disaster_model.PNG",
-"author": ""
-}
-,
-
-{
-"category": "",
-"title": "Project star gazing",
+"title": "Visualizing stars in the universe",
 "description": "3D Visualzation of Stars ⭐ in Our UniverseStars always catches people’s imagi...",
-"url": "/projects/Project%20Star%20Gazing/",
+"url": "/projects/VIsualizing%20stars%20in%20the%20universe/",
 "image": "../assets/images/star_gaze_app.png",
 "author": ""
 }
@@ -138,6 +128,16 @@
 "description": "Top Played Songs at Different Times of Day (night / late night)This project i...",
 "url": "/projects/My%20Spotify%20Data%20Analysis%20in%20SQL/",
 "image": "../assets/images/top_played_tracks_at_late_night.png",
+"author": ""
+}
+,
+
+{
+"category": "",
+"title": "Generating linkedin bio using gpt2 and fastai",
+"description": "BackgroundFast.ai is a high-level deep learning framework built on PyTorch th...",
+"url": "/projects/Generating%20LinkedIn%20Bio%20using%20GPT2%20and%20Fastai/",
+"image": "../assets/images/tokenizer.PNG",
 "author": ""
 }
 
