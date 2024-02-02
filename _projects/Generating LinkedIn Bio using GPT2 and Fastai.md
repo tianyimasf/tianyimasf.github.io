@@ -164,7 +164,7 @@ preds = learn.model.generate(inp, max_length=70, num_beams=5, temperature=1.5)
 tokenizer.decode(preds[0].cpu().numpy())
 ```
 
-Here we're being ambitious and trying a sequence length of 70. The result is good in the beginning, but the sentence soon starts to behave a little weird: "I'm a business professional with 10 years of experience working in the financial services industry. I have a strong background in financial analysis, financial reporting, and financial reporting. I have a strong background in financial analysis, financial reporting, and financial reporting. I have a strong background in financial analysis, financial reporting, and financial reporting. I have a strong background".
+Here we're being ambitious and trying a sequence length of 70. The result is good in the beginning, but the sentence soon starts to behave a little weird: `"I'm a business professional with 10 years of experience working in the financial services industry. I have a strong background in financial analysis, financial reporting, and financial reporting. I have a strong background in financial analysis, financial reporting, and financial reporting. I have a strong background in financial analysis, financial reporting, and financial reporting. I have a strong background"`.
 
 What if we train it for 1 epoch again without applying any of the other advanced techniques described above?
 
@@ -185,7 +185,7 @@ preds = learn.model.generate(inp, max_length=75, num_beams=10, temperature=1.5)
 tokenizer.decode(preds[0].cpu().numpy())
 ```
 
-"I've founded and led a number of startups in the tech space. I'm currently working on a few of them, but I'm looking forward to connecting with people from all walks of life to learn more about what it takes to be a successful entrepreneur.I am a recent graduate from the University of Texas at Dallas with a Bachelors of Science in Computer Science. I"
+`"I've founded and led a number of startups in the tech space. I'm currently working on a few of them, but I'm looking forward to connecting with people from all walks of life to learn more about what it takes to be a successful entrepreneur.I am a recent graduate from the University of Texas at Dallas with a Bachelors of Science in Computer Science. I"`
 
 Actually seems better!
 
@@ -200,21 +200,21 @@ preds = learn.model.generate(inp, max_length=50, num_beams=10, temperature=1.5)
 tokenizer.decode(preds[0].cpu().numpy())
 ```
 
-"Dedicated Film professional with a demonstrated history of working in the film industry. Skilled in Film Production, Film Editing, Film Production, and Film Production. Strong arts and design professional with a Bachelor of Arts (B.A.) focused in Film".
+`"Dedicated Film professional with a demonstrated history of working in the film industry. Skilled in Film Production, Film Editing, Film Production, and Film Production. Strong arts and design professional with a Bachelor of Arts (B.A.) focused in Film".`
 
 Cool!
 
 Training it for one more epoch, and try this again, we get:
 
-"Dedicated Film professional with a demonstrated history of working in the film and television industry. Skilled in Photography, Film Production, Photography, and Videography. Strong arts and design professional with a Bachelor of Arts (B.A.) focused in Film"
+`"Dedicated Film professional with a demonstrated history of working in the film and television industry. Skilled in Photography, Film Production, Photography, and Videography. Strong arts and design professional with a Bachelor of Arts (B.A.) focused in Film"`
 
-The skills part looks a bit better! It might due to change, though. We try another example with the same sequence length(50).
+The skills part looks a bit better! It might due to chance, though. We try another example with the same sequence length(50).
 
 ```python
 prompt = "Machine Learning Engineer"
 ```
 
-"Machine Learning Engineer with a demonstrated history of working in the information technology and services industry. Skilled in Python, Java, C, C++, and JavaScript. Strong information technology professional with a Bachelor of Science (B.S.) focused in Computer Science"
+`"Machine Learning Engineer with a demonstrated history of working in the information technology and services industry. Skilled in Python, Java, C, C++, and JavaScript. Strong information technology professional with a Bachelor of Science (B.S.) focused in Computer Science"`
 
 Neat!
 
@@ -222,7 +222,7 @@ Neat!
 prompt = "Passionate Animator"
 ```
 
-"Passionate Animator with a demonstrated history of working in the animation industry. Skilled in Sketching, Animation, Animation, and Visual Effects. Strong arts and design professional with a Bachelor of Fine Arts (BFA) focused in Fine Arts and Design from University of California, Irvine.Experienced"
+`"Passionate Animator with a demonstrated history of working in the animation industry. Skilled in Sketching, Animation, Animation, and Visual Effects. Strong arts and design professional with a Bachelor of Fine Arts (BFA) focused in Fine Arts and Design from University of California, Irvine.Experienced"`
 
 I really like this! They even changed the university that they go to (they went to University of Texas at Dallas in a previous example). Seems like something is working.
 
