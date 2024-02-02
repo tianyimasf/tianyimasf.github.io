@@ -70,6 +70,10 @@ class TransformersTokenizer(Transform):
     def decodes(self, x): return TitledStr(self.tokenizer.decode(x.cpu().numpy()))
 ```
 
+Here, I defined `device` and turned the `tensor` ids into `long` format. This is because the model only accepts
+`long` or `int` format ids, and without this step some of the bios will return `float` ids instead, which will
+results in an error when training/validating.
+
 We build the `DataLoader` step by step, first build a `TsfmList` which stands for "TransformedList":
 
 ```python
@@ -93,6 +97,135 @@ bs,sl = 4,256
 dls = tls.dataloaders(bs=bs, seq_len=sl)
 ```
 
+To see a mini-batch, we can use the `show_batch()` function, like so:
+
+![show batch](../../assets/images/show_batch.PNG)
+
 ## Fine-tuning the model
 
-TBD
+Here we only apply basic fine-tunings and I'll update to more complex ones later.
+
+Fast.ai have the `Callback` object which functions similar to Pytorch's `Hook`. Basically, we define a function
+that will be inserted into a certain stage of the training process and run. Here, we define a `DropOutput()` callback
+that replace the predictions with only its first element, which is a list of output token ids, and thus allow us to fine-tune the model by calculating the loss of outputs.
+
+```python
+class DropOutput(Callback):
+    def after_pred(self): self.learn.pred = self.pred[0]
+```
+
+Finally, we can create out `Learner` object, which is a fastai object grouping data, model and loss function in order to handle model training or inference.
+
+```python
+learn = Learner(dls, model, loss_func=CrossEntropyLossFlat(), cbs=[DropOutput], metrics=Perplexity()).to_fp16()
+```
+
+We can check how good the model is without any fine-tuning step:
+
+![validate](../../assets/images/validate.PNG)
+
+62.5 is not too bad considering the size of our dataset.
+
+Now we just need to utilize the following two techniques to fine-tune the model:
+
+1. `lr_find()`: this is a fast.ai function based on a paper that automatically finds the best learning rate for your training. We call this before training to estimate the best learning rate.
+
+2. `fit_one_cycle()`: or otherwise called 1cycle policy. Here we didn't utilize the full potential of this technique, but the idea is to train with discriminative learning rates and gradual unfreezing. When fine-tuning LLMs, we want the initial layers like the embedding and first couple layers to have more aggressive learning rates so that they can be optimized more easily, and use more conservative learning rates for higher level layers towards the end so that they are more easily generalized to new tasks. Gradual unfreezing is used coupled with discriminative learning rates, unfreezing layers deeper and deeper after using `fit_one_cycle()` with different learning rates every time to incorporate layers gradually.
+
+First we find the best learning rate:
+
+![lr find](../../assets/images/lr_find.PNG)
+
+I didn't use the precise learning rate here, which I'll also fix later.
+
+![1epoch](../../assets/images/1epoch.PNG)
+
+After training for just one epoch, we already got a perplexity score less than 50!
+
+Here is a snippet of codes that uses pre-trained model before fine-tuning:
+
+```python
+ids = tokenizer.encode('I’m an enthusiastic business management')
+t = torch.LongTensor(ids)[None]
+preds = model.generate(t)
+tokenizer.decode(preds[0].numpy())
+```
+
+Which produced the following sentence: "I’m an enthusiastic business management consultant. I'm a big fan of the company and I"
+
+Now we try with our model after fine-tuning one epoch:
+
+```python
+prompt = "I'm a business professional with 10 years of"
+prompt_ids = tokenizer.encode(prompt)
+inp = tensor(prompt_ids)[None].cuda()
+inp.shape
+preds = learn.model.generate(inp, max_length=70, num_beams=5, temperature=1.5)
+tokenizer.decode(preds[0].cpu().numpy())
+```
+
+Here we're being ambitious and trying a sequence length of 70. The result is good in the beginning, but the sentence soon starts to behave a little weird: "I'm a business professional with 10 years of experience working in the financial services industry. I have a strong background in financial analysis, financial reporting, and financial reporting. I have a strong background in financial analysis, financial reporting, and financial reporting. I have a strong background in financial analysis, financial reporting, and financial reporting. I have a strong background".
+
+What if we train it for 1 epoch again without applying any of the other advanced techniques described above?
+
+![find lr2](../../assets/images/find_lr.PNG)
+
+![2epoch](../../assets/images/fit_one_cycle2.PNG)
+
+Again I was misunderstanding the `lr_find()` function, and this will be updated later.
+
+Trying again with a different prompts and sequence length of 75.
+
+```python
+prompt = "I've founded"
+prompt_ids = tokenizer.encode(prompt)
+inp = tensor(prompt_ids)[None].cuda()
+inp.shape
+preds = learn.model.generate(inp, max_length=75, num_beams=10, temperature=1.5)
+tokenizer.decode(preds[0].cpu().numpy())
+```
+
+"I've founded and led a number of startups in the tech space. I'm currently working on a few of them, but I'm looking forward to connecting with people from all walks of life to learn more about what it takes to be a successful entrepreneur.I am a recent graduate from the University of Texas at Dallas with a Bachelors of Science in Computer Science. I"
+
+Actually seems better!
+
+Another example starting with "Dedicated Film professional" and sequence length of 50:
+
+```python
+prompt = "Dedicated Film professional"
+prompt_ids = tokenizer.encode(prompt)
+inp = tensor(prompt_ids)[None].cuda()
+inp.shape
+preds = learn.model.generate(inp, max_length=50, num_beams=10, temperature=1.5)
+tokenizer.decode(preds[0].cpu().numpy())
+```
+
+"Dedicated Film professional with a demonstrated history of working in the film industry. Skilled in Film Production, Film Editing, Film Production, and Film Production. Strong arts and design professional with a Bachelor of Arts (B.A.) focused in Film".
+
+Cool!
+
+Training it for one more epoch, and try this again, we get:
+
+"Dedicated Film professional with a demonstrated history of working in the film and television industry. Skilled in Photography, Film Production, Photography, and Videography. Strong arts and design professional with a Bachelor of Arts (B.A.) focused in Film"
+
+The skills part looks a bit better! It might due to change, though. We try another example with the same sequence length(50).
+
+```python
+prompt = "Machine Learning Engineer"
+```
+
+"Machine Learning Engineer with a demonstrated history of working in the information technology and services industry. Skilled in Python, Java, C, C++, and JavaScript. Strong information technology professional with a Bachelor of Science (B.S.) focused in Computer Science"
+
+Neat!
+
+```python
+prompt = "Passionate Animator"
+```
+
+"Passionate Animator with a demonstrated history of working in the animation industry. Skilled in Sketching, Animation, Animation, and Visual Effects. Strong arts and design professional with a Bachelor of Fine Arts (BFA) focused in Fine Arts and Design from University of California, Irvine.Experienced"
+
+I really like this! They even changed the university that they go to (they went to University of Texas at Dallas in a previous example). Seems like something is working.
+
+Upon more experimentation, it seems that anything over 50-60 words is going to be repetitive. In our next update, I'll apply more advanced fine-tuning techniques and see if the performance improves.
+
+[Source Code(Github)](https://github.com/tianyimasf/writing-bio-using-gpt2)
