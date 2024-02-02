@@ -34,7 +34,7 @@ in those languages.
 
 Finally, I saved only the bios to a csv.
 
-## Basic Fine-tuning using fast.ai and gpt2
+## Importing pre-trained model
 
 Fast.ai makes it very easy to fine-tune a language model. Here I only did the very basic fine-tuning steps. It worked
 well for sentences with 30 - 50 words. However, you can definitely see patterns in the generated sentences, and it's
@@ -54,7 +54,7 @@ model = GPT2LMHeadModel.from_pretrained(pretrained_weights)
 
 Then we use fast.ai's `text` library to create a `DataLoader` object that has a number of attributes to be used when training the model.
 
-## Preparing data using fast.ai
+## Load data into fast.ai
 
 First we need to wrap torch's tokenizer into fast.ai's `Transform` object:
 
