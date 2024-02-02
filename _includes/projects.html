@@ -1,7 +1,6 @@
 <h2 class="m0a" data-aos="fade-up">Projects I've Worked on:</h2>
 <div class="projects">
-  {% assign sorted = site.projects | sort: 'date' | reverse %} {% for item in
-  sorted %}
+  {% assign sorted = site.projects | sort: 'index' %} {% for item in sorted %}
   <a href="{{item.url | relative_url}}" class="nostyle p-3">
     <div
       class="project borders cards rounded overflow-hidden"

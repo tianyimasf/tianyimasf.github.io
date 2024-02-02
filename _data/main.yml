@@ -75,19 +75,19 @@ expertise:
     color: rgb(80, 185, 185)
 
   - title: Excel
-    level: 70
+    level: 75
     color: rgb(160, 158, 158)
 
   - title: SQL
-    level: 90
+    level: 75
     color: rgb(112, 195, 148)
 
   - title: "Machine_Learning_Algorithms"
-    level: 65
+    level: 85
     color: rgb(124, 142, 222)
 
   - title: R
-    level: 70
+    level: 60
     color: rgb(230, 133, 172)
 
 

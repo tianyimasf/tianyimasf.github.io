@@ -1,9 +1,10 @@
 ---
-name: Anime Character Art and Personality Dataset
+name: Building Anime Character Art and Personality Dataset
 image: ../assets/images/anime_art.PNG
 description: Scraped and built Anime Character Art and Personality Dataset.
 date: 2023-10-25
 layout: post
+index: 1
 ---
 
 ![Dataset Snapshot](../assets/images/anime_art.PNG)

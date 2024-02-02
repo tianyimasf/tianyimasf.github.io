@@ -4,6 +4,7 @@ image: ../assets/images/star_gaze_app.png
 description: 3D visualization of stars in the universe, with Dash and Plotly
 date: 2023-05-12
 layout: post
+index: 6
 ---
 
 # 3D Visualzation of Stars ⭐ in Our Universe
