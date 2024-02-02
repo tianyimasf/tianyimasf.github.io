@@ -4,7 +4,7 @@ image: ../assets/images/word_cloud_all_courses.png
 description: Text analysis, topic extraction, and correlation analysis using Python
 date: 2023-10-12
 layout: post
-index: 3
+index: 2
 ---
 
 Text analysis and topic extraction using Coursera courses data.

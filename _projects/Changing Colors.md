@@ -4,7 +4,7 @@ image: ../assets/images/moving_colors2.PNG
 description: A Manefestation of Mathematical Concepts and Functions through Colors
 date: 2023-08-10
 layout: post
-index: 7
+index: 9
 ---
 
 # Moving Colors

@@ -4,14 +4,14 @@ image: ../assets/images/tokenizer.PNG
 description: Fine-tuning LLM to generate stylized texts.
 date: 2024-01-31
 layout: post
-index: 8
+index: 0
 ---
 
 # Background
 
 Fast.ai is a high-level deep learning framework built on PyTorch that is highly flexible and easy to use.
-It's developed by Jeremy Howard, which also used this framework with some torch usage to teach an extensive
-deep learning course that litearlly impacted people's deep learning career trajectories. It's so foundamental,
+It's developed by Jeremy Howard, which also used this framework with some torch to teach an extensive
+deep learning course that literally impacted people's deep learning career trajectories. It's so foundamental,
 detailed, yet easy to understand and intuitive. And I'll use fast.ai to apply NLP techniques illustrated in
 his book to fine-tune gpt2 to make it write LinkedIn profile for me!
 

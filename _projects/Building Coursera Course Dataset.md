@@ -4,7 +4,7 @@ image: ../assets/images/word_vectors.png
 description: Scraped and built Coursera Course dataset.
 date: 2023-11-09
 layout: post
-index: 0
+index: 3
 ---
 
 # Why are Coursera data interesting?
