@@ -4,7 +4,7 @@ image: ../assets/images/corr_heatmap_WiDS.png
 description: Long range extreme weather forcasting to fight climate change.
 date: 2023-03-18
 layout: post
-index: 7
+index: 0.5
 ---
 
 # Long Range Extreme Weather Forecasting
