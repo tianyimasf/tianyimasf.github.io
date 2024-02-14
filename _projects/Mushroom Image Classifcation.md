@@ -4,7 +4,7 @@ image: ../assets/images/280_mushroom_species_classifier.PNG
 description: A North EU mushroom image classifier trained on a FGVCx dataset with fastai and ResNet34.
 date: 2023-05-21
 layout: post
-index: 5
+index: 3
 ---
 
 # Project Deep Shroom: 9 Species & 280 Species

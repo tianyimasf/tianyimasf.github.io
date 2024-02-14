@@ -4,7 +4,7 @@ image: ../assets/images/total_steps.png
 description: An exaustive list of techniques I used to analyze Fitbit Tracker usage data.
 date: 2023-11-14
 layout: post
-index: 1
+index: 7
 ---
 
 # What to expect in this blog

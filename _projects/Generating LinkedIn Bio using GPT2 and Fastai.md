@@ -4,7 +4,7 @@ image: ../assets/images/tokenizer.PNG
 description: Fine-tuning LLM to generate stylized texts.
 date: 2024-01-31
 layout: post
-index: 0
+index: 9
 ---
 
 # Background
