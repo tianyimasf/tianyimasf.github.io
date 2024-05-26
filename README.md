@@ -1,8 +1,7 @@
-# oye-bobs.github.io
-This is a repository for my personal portfolio.
+# tianyimasf.github.io
+This is a repository for my fun side projects.
 
 For more information or inquiries, reach out to me on:
-* Email: <a href="mailto:adeoyeayan@gmail.com">Adeoye's email</a>
-* <a href="https://www.linkedin.com/in/adeoyemalumi/">LinkedIn</a>
-* ORCiD: [0009-0002-8223-7011](https://orcid.org/0009-0002-8223-7011)
-* <a href="https://adeoyemalumi.netlify.app/">Website</a>
+* Email: <a href="mailto:alex.ma@colorado.edu">Alex's email</a>
+* GitHub: [@oye-bobs](https://github.com/tianyimasf)
+* <a href="https://tianyimasf.github.io/ai/">Blog</a>
