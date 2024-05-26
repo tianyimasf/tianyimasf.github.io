@@ -1,7 +1,7 @@
 # Alex's world of fun coding projects.
 
 
-## Welcome
+## Welcome!
 
 Hello there! I'm Tianyi Ma, I go by Alex. I'm full of ideas and love to spend my spare time doing fun side coding projects. You can find them here. 
 
@@ -30,7 +30,9 @@ Check out some of them here:
 
 ## Coursera Marketplace Dataset 2023 (~1500 downloads)
 
-[Dataset](https://www.kaggle.com/datasets/tianyimasf/coursera-course-dataset)
+- [Dataset](https://www.kaggle.com/datasets/tianyimasf/coursera-course-dataset)
+
+- [Github](https://github.com/tianyimasf/tidy-tuesday-social-dataset-analysis/blob/main/scrapping_coursera.py)
 
 ![Coursera Dataset](/Images/dataset-cover.jpg)
 
@@ -78,7 +80,7 @@ Participating in Cohort 5 of the Climatebase Fellowship, the climate career acce
 _Scale AI, a data labeling SaaS unicorn startup at the bay area_  
 _April 2022 - March 2023 (1 year)_
 
-Lead a project that deployed a price prediction linear regression model that handled the payment calculation for the company's data labeling workforce, around 40k-50k workers, and saved 10% labor cost.
+Led a project that deployed a price prediction linear regression model that handled the payment calculation for the company's data labeling workforce, around 40k-50k workers, and saved 10% labor cost.
 
 ---
 
@@ -86,7 +88,7 @@ Lead a project that deployed a price prediction linear regression model that han
 
 - **Data Analysis Software**: Microsoft Excel, Tableau
 - **Programming Languages**: Python, R, SQL, TypeScript, Java, C/C++
-- **Software Framework and Libraries**: React, NodeJS, Django
+- **Software Framework and Libraries**: React, NodeJS, Django, Pandas, NumPy, scikit-learn, selenium, BeautifulSoup
 - **Database**: MongoDB, Postgresql
 - **Cloud Technology**: GCP, AWS Lambda, s3, step function, Docker
 - **Busuiness**: Agile Dev, Lean Startup
@@ -108,7 +110,7 @@ Lead a project that deployed a price prediction linear regression model that han
 
 For more information or inquiries, reach out to me on:
 * Email: <a href="mailto:alex.ma@colorado.edu">Alex's email</a>
-* GitHub: [@oye-bobs](https://github.com/tianyimasf)
+* GitHub: [@tianyimasf](https://github.com/tianyimasf)
 * <a href="https://tianyimasf.github.io/ai/">Blog</a>
 
 
