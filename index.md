@@ -12,9 +12,6 @@ Here is a list of projects I've worked on and am currently building.
 ---
 
 ## Projects
-Prior to immersing myself in Earth Data Science, I undertook several projects focusing on data analysis.
-
-Check out some of them here:
 
 ## Music Genre Feature Analysis
 
@@ -35,6 +32,27 @@ Check out some of them here:
 - [Github](https://github.com/tianyimasf/tidy-tuesday-social-dataset-analysis/blob/main/scrapping_coursera.py)
 
 ![Coursera Dataset](/Images/dataset-cover.jpg)
+
+---
+
+## LinkedIn Job Postings Analysis
+
+- [Data Cleaning and Transformation](https://tianyimasf.github.io/ai/data-cleaning/)
+
+- [Data Visualization and Presentation](https://tianyimasf.github.io/ai/job-title-analyze/)
+
+- [Kaggle Notebook](https://www.kaggle.com/code/tianyimasf/linkedin-job-postings-data-prep)
+
+![Viz from analysis](/Images/job_title_viz.jpg)
+
+---
+
+## Ongoing Proejct
+
+- Bird Soundscape based on [Ebird](https://ebird.org/) data
+- Image Toys based on [Brown University's Computational Photography course](https://browncsci1290.github.io/webpage/#H2_12)
+- Kindle Wrap: a visual summary of your kindle activities last year
+- Geospatial analysis: maps and data
 
 ---
 
@@ -91,17 +109,18 @@ Led a project that deployed a price prediction linear regression model that hand
 - **Software Framework and Libraries**: React, NodeJS, Django, Pandas, NumPy, scikit-learn, selenium, BeautifulSoup
 - **Database**: MongoDB, Postgresql
 - **Cloud Technology**: GCP, AWS Lambda, s3, step function, Docker
-- **Busuiness**: Agile Dev, Lean Startup
+- **Business**: Agile Dev, Lean Startup
 
 ---
 
 ##  Strengths
 
-- Fast Skill Learning
-- Effective Communication
-- Proactive problem solver
 - Curiosity
+- Proactive problem solver
 - Attention to detail
+- Organized
+- Fast skill learning
+- Effective communication
 - Work with teams
 
 ---
