@@ -25,16 +25,6 @@ Here is a list of projects I've worked on and am currently building.
 
 ---
 
-## Coursera Marketplace Dataset 2023 (~1500 downloads)
-
-- [Dataset](https://www.kaggle.com/datasets/tianyimasf/coursera-course-dataset)
-
-- [Github](https://github.com/tianyimasf/tidy-tuesday-social-dataset-analysis/blob/main/scrapping_coursera.py)
-
-![Coursera Dataset](/Images/dataset-cover.jpg)
-
----
-
 ## LinkedIn Job Postings Analysis
 
 - [Data Cleaning and Transformation](https://tianyimasf.github.io/ai/data-cleaning/)
@@ -44,6 +34,16 @@ Here is a list of projects I've worked on and am currently building.
 - [Kaggle Notebook](https://www.kaggle.com/code/tianyimasf/linkedin-job-postings-data-prep)
 
 ![Viz from analysis](/Images/job_title_viz.png)
+
+---
+
+## Coursera Marketplace Dataset 2023 (~1500 downloads)
+
+- [Dataset](https://www.kaggle.com/datasets/tianyimasf/coursera-course-dataset)
+
+- [Github](https://github.com/tianyimasf/tidy-tuesday-social-dataset-analysis/blob/main/scrapping_coursera.py)
+
+![Coursera Dataset](/Images/dataset-cover.jpg)
 
 ---
 
