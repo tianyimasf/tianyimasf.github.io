@@ -1,30 +1,13 @@
-# Adeoye's Earth Data Science Journey.
+# Alex's world of fun coding projects.
 
 
 ## Welcome
 
-Hello there! I'm Adeoye Malumi, and I am a data analyst.
+Hello there! I'm Tianyi Ma, I go by Alex. I'm full of ideas and love to spend my spare time doing fun side coding projects. You can find them here. 
 
-I've always had a knack for working with numbers, collecting data, and finding trends and patterns that others miss.
+Don't be fooled by how I call them -- they are fun side projects but they also help me practice a wide range of skills: from exploratory data analysis, to data visualization, to predictive machine learning, image processing, web dev, ... It's a whole new world out there and they always keep me learning! Even they are fun projects, they are by no means useless.
 
-This interest led me to begin my journey as a data analyst. It all started from working on a secondary school project with microsoft excel while I was about 13 years old, to joining a data science bootcamp many years later.
-
-For me, being a data analyst is a bit like being a detective. Its a game of tracking the clues within the numbers to find the culprit,catching the culprit and telling detailed stories on how and why the culprit is guilty.
-Data Analysis for me has always being more like a game,and this has always been very rewarding and exhilarating for me.
-
-## My Journey to Earth Data Science: Connecting Passion with Purpose
-
-As someone who loves digging into data and studied Earth Sciences in college, I naturally found my way into Earth Data Science. It's a mix of using cool tools to analyze Earth-related info, like maps and measurements from satellites.
-
-During my college days, I got really interested in how Earth works — you know, stuff like rocks, weather, and how everything fits together. But as I learned more, I realized that data could help us understand these things even better.
-
-Earth Data Science is all about using fancy techniques to make sense of tons of Earth info we have. Think of it like putting together puzzle pieces to see the bigger picture. It's super important today because it helps us deal with big issues like climate change, natural disasters, and using resources wisely.
-
-For me, choosing Earth Data Science wasn't just about a job. It felt like following my heart. I believe it's a powerful way to make a difference in our world, by using data to solve real problems.
-
-As I keep exploring this field, I see how it can help us build a safer and healthier planet for everyone. It's exciting to think about how Earth Data Science can shape our future for the better.
-
-Come join me in discovering new ideas that help our planet and communities thrive. Here, we'll mix old-fashioned earth science know-how with the latest technology to make things better for everyone.
+Here is a list of projects I've worked on and am currently building.
 
 ---
 
@@ -33,161 +16,100 @@ Prior to immersing myself in Earth Data Science, I undertook several projects fo
 
 Check out some of them here:
 
-## SQL
+## Music Genre Feature Analysis
 
-[Data Cleaning in SQL](https://github.com/oye-bobs/SQLPorfolioProjects/blob/main/Housing%20Data%20Cleaning%20Project.sql)
+- [Excel data wrangling and analysis](https://o365coloradoedu-my.sharepoint.com/:x:/g/personal/tima2081_colorado_edu/ETp3FcxWa7NJnnsVF0n8s_0BG-CS2T7Gi3dRbzqsFAvc_g?e=SorLrq)
 
-![Housing Data Cleaning Project](/Images/housingIMG.jpg)
+- [Exploratory data analysis and vizualization R Notebook](/notebooks/feature-analysis-in-R.html)
 
----
+- [Github](https://github.com/tianyimasf/music-genre-analysis)
 
-
-
-[COVID 19 Data Exploration SQL](https://github.com/oye-bobs/SQLPorfolioProjects/blob/main/covid%20portfolio%20project%201.sql)
-
-![COVID 19 Data Exploration](/Images/covid.jpg)
+![Music Genre Feature Analysis](/Images/valence_viz.png)
 
 ---
 
-## TABLEAU 
+## Coursera Marketplace Dataset 2023 (~1500 downloads)
 
-[TABLEAU PROJECTS](https://public.tableau.com/app/profile/adeoye.malumi)
+[Dataset](https://www.kaggle.com/datasets/tianyimasf/coursera-course-dataset)
 
-![Tableau Projects](/Images/tableau.jpg)
-
----
-
-## POWER BI 
-
-[POWER BI PROJECTS](https://github.com/oye-bobs/PowerBI-Projects)
-
-![Power BI Projects](/Images/powerbi.jpg)
+![Coursera Dataset](/Images/dataset-cover.jpg)
 
 ---
 
-## MICROSOFT EXCEL 
-
-[EXCEL PROJECTS](https://github.com/oye-bobs/ExcelProjects)
-
-![Excel Projects](/Images/excel.jpg)
-
-
-
+## Random things about me
 
 ---
 
-## Additional Projects
+- I keep 3 cats with my husband. Their name is Butter, River, and Smudge. 
 
-**Environmental Data Science Innovation and Inclusion Lab (ESIIL) Short Course**
+- I lived in Beijing, China until 18 and came to America. My high school is 20 min walk away from the Ti'anmen Square.
 
-- [Project 1: Accessing NCEI-NOAA Data Using API, An Open Reproducible Science!](notebooks/murtala_time_series_2.html)
+- I have my mom's surname.
 
-  
-  Location Used : Murtala Mohammed Airport, Lagos, Nigeria
+- Music is my life.
 
+---
 
+## Serious stuff
 
-  <embed type="text/html" src="maps/mmia.html" width="600" height="600">
-
-
-
-
-  
-- [Project 2: Accessing MODIS Spatial Data and Analyzing Fire In Gwagwalada, Abuja, Nigeria.](notebooks/gwagwalada.html)
-
-
-
-  Location Used : Gwagwalada, Abuja, Nigeria.
-
-
-
-  ![Gwagwalada NDVI](/Images/gwagwalada.png)
-
-
-
-  
 ---
 
 ## Education
 
-**B.Sc. in Geology and Earth Sciences**  
-_University of Benin - Benin City, Edo State_  
+**B.S. in Mathematics, Minor in Computer Science**  
+_University of Rochester_  
+
+**M.S. in Applied Mathematics**  
+_University of Colorado, Boulder (graduating 2026)_  
 
 
 ---
 
 ##  Work Experience
 
-**Graduate Intern**  
-_Inter trade Limited, Abuja, Nigeria_  
-_June 2023 – Present_
+**Climatebase Fellowship**    
+_March 2024 – Present (3 months)_
 
-Installation and maintenance of solar power infastructures
-
+Participating in Cohort 5 of the Climatebase Fellowship, the climate career accelerator.
 
 
-**Student Trainee**  
-_Google Developers Group, Remote – Google_  
-_Aug 2022 - May 2023_
 
-Gaining Hand-on experience in Machine learning and Artificial Intelligence
+**Software Engineer**  
+_Scale AI, a data labeling SaaS unicorn startup at the bay area_  
+_April 2022 - March 2023 (1 year)_
 
----
-
-##  Certifications/Licenses
-
-- Tensorflow Developers Certificate, May 2023
-- Accenture North America - Data Analysis and Visualisation Job Simulation(Forage), April 2024
-- GE Aerospace - Explore Human Resources Job Simulation(Forage), April 2024
-- Data Science Methodology (Coursera), Feb 2023
-- R Programming (Coursera), Nov 2022
-- DeepLearning.AI Tensorflow Developer Specialisation (Coursera), Oct 2022
-- Natural Language processing in Tensorflow (Coursera), Oct 2022
-- Python for Data Science, AI, and Development (Coursera), Oct 2022
-- Tools for Data Science (Coursera), Oct 2022
-- Convolutional Neural Network (Coursera), Sep 2022
-- Convolutional Neural Network in Tensorflow (Coursera), Sep 2022
-- Introduction to Tensorflow for Artificial Intelligence, Machine Learning and Deep Learning (Coursera), Sep 2022
-- Sequence Models (Coursera), Sep 2022
-- What is Data Science (Coursera), Sep 2022
-- Neural Network and Deeplearning (Coursera), Aug 2022
-- Structuring Machine Learning Projects (Coursera), Aug 2022
-- The Data Scientist's Toolbox (Coursera), Aug 2022
+Lead a project that deployed a price prediction linear regression model that handled the payment calculation for the company's data labeling workforce, around 40k-50k workers, and saved 10% labor cost.
 
 ---
 
 ##  Skills
 
-- **Data Analysis Software**: Microsoft Excel, Tableau,Power BI
-- **Programming Languages**: R, Python, SQL
+- **Data Analysis Software**: Microsoft Excel, Tableau
+- **Programming Languages**: Python, R, SQL, TypeScript, Java, C/C++
+- **Software Framework and Libraries**: React, NodeJS, Django
+- **Database**: MongoDB, Postgresql
+- **Cloud Technology**: GCP, AWS Lambda, s3, step function, Docker
+- **Busuiness**: Agile Dev, Lean Startup
 
 ---
 
 ##  Strengths
 
-- Public Speaking
+- Fast Skill Learning
 - Effective Communication
-- Creative Problem Solving
-- Data Analysis and Visualization
-- Crtical Thinking
-- Mentorship
-- Leadership
-- Team Management
+- Proactive problem solver
+- Curiosity
+- Attention to detail
+- Work with teams
 
 ---
 
 ##  Contact
 
 For more information or inquiries, reach out to me on:
-* Email: <a href="mailto:adeoyeayan@gmail.com">Adeoye's email</a>
-* <a href="https://www.linkedin.com/in/adeoyemalumi/">LinkedIn</a>
-* GitHub: [@oye-bobs](https://github.com/oye-bobs)
-* ORCiD: [0009-0002-8223-7011](https://orcid.org/0009-0002-8223-7011)
-* <a href="https://adeoyemalumi.netlify.app/">Website</a>
+* Email: <a href="mailto:alex.ma@colorado.edu">Alex's email</a>
+* GitHub: [@oye-bobs](https://github.com/tianyimasf)
+* <a href="https://tianyimasf.github.io/ai/">Blog</a>
 
-
-<embed 
-  type="text/html" src="/Images/UNB.html" 
-  width="600" height="600">
 
 
