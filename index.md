@@ -43,7 +43,7 @@ Here is a list of projects I've worked on and am currently building.
 
 - [Kaggle Notebook](https://www.kaggle.com/code/tianyimasf/linkedin-job-postings-data-prep)
 
-![Viz from analysis](/Images/job_title_viz.jpg)
+![Viz from analysis](/Images/job_title_viz.png)
 
 ---
 
