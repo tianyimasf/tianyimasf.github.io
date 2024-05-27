@@ -47,7 +47,7 @@ Here is a list of projects I've worked on and am currently building.
 
 ---
 
-## Ongoing Proejct
+## Ongoing Project
 
 - Bird Soundscape based on [Ebird](https://ebird.org/) data [\[Github\]](https://github.com/tianyimasf/bird-sound-scape/blob/main/data%20preprocessing.ipynb)
 - Image Toys based on [Brown University's Computational Photography course](https://browncsci1290.github.io/webpage/#H2_12)
