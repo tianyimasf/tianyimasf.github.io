@@ -47,6 +47,14 @@ Here is a list of projects I've worked on and am currently building.
 
 ---
 
+## Learning notes for Deep Learning with Pytorch
+
+- [Codebooks](https://github.com/tianyimasf/deep-learning-pytorch)
+
+![Codebook](/Images/code.png)
+
+---
+
 ## Ongoing Project
 
 - Bird Soundscape based on [Ebird](https://ebird.org/) data [\[Github\]](https://github.com/tianyimasf/bird-sound-scape/blob/main/data%20preprocessing.ipynb)
