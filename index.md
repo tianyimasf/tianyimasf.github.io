@@ -25,6 +25,16 @@ Here is a list of projects I've worked on and am currently building.
 
 ---
 
+## Mentorship Program Attendance Analysis
+
+- [Python Analysis Script](https://colab.research.google.com/drive/1JC4JylzkV3HPu6bDFp60Wwd3ITfi9gYr?usp=sharing)
+
+- [Written Report & Viz](https://docs.google.com/document/d/1nHmsxaV5x8rwXcEXnrNi6lCodwLy2TukxNCoUNGT5nY/edit?usp=sharing)
+
+![Viz from analysis](/Images/7.png)
+
+---
+
 ## LinkedIn Job Postings Analysis
 
 - [Data Cleaning and Transformation](https://tianyimasf.github.io/ai/data-cleaning/)
