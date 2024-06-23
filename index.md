@@ -13,15 +13,11 @@ Here is a list of projects I've worked on and am currently building.
 
 ## Projects
 
-## Data Analysis Projects
+## Data Analysis
 
-[Projects](/notebooks/analysis-projects.md)
+[List of Projects](/notebooks/analysis-projects.md)
 
 ![Music Genre Feature Analysis](/Images/valence_viz.png)
-
-![Viz from analysis](/Images/7.png)
-
-![Viz from analysis](/Images/job_title_viz.png)
 
 ---
 
