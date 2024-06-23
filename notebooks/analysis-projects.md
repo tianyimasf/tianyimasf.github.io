@@ -10,7 +10,7 @@
 
 - [Github](https://github.com/tianyimasf/music-genre-analysis)
 
-![Music Genre Feature Analysis](/Images/valence_viz.png)
+![Music Genre Feature Analysis](../Images/valence_viz.png)
 
 ---
 
@@ -20,7 +20,7 @@
 
 - [Written Report & Viz](https://docs.google.com/document/d/1nHmsxaV5x8rwXcEXnrNi6lCodwLy2TukxNCoUNGT5nY/edit?usp=sharing)
 
-![Viz from analysis](/Images/7.png)
+![Viz from analysis](../Images/7.png)
 
 ---
 
@@ -32,4 +32,4 @@
 
 - [Kaggle Notebook](https://www.kaggle.com/code/tianyimasf/linkedin-job-postings-data-prep)
 
-![Viz from analysis](/Images/job_title_viz.png)
+![Viz from analysis](../Images/job_title_viz.png)
