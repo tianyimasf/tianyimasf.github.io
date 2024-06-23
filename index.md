@@ -15,7 +15,7 @@ Here is a list of projects I've worked on and am currently building.
 
 ---
 
-## Data Analysis
+## Analyzing Data
 
 - [List of Projects](/notebooks/analysis-projects.md)
 

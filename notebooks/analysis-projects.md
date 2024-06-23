@@ -1,4 +1,4 @@
-# Projects
+# Data Analysis Projects
 
 ---
 
