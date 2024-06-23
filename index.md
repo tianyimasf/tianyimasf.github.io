@@ -21,6 +21,8 @@ Here is a list of projects I've worked on and am currently building.
 
 ![Music Genre Feature Analysis](/Images/valence_viz.png)
 
+![Viz from analysis](/Images/job_title_viz.png)
+
 ---
 
 ## Coursera Marketplace Dataset 2023 (~1500 downloads)
