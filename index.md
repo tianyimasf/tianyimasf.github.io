@@ -83,8 +83,15 @@ _University of Colorado, Boulder (graduating 2026)_
 
 ##  Work Experience
 
+**Terra.do: Software for Climate Course**    
+_June 2024 - Present (1 months)_
+
+An 8-week online course that unlocks student potential in building software for climate tech. Covers 4 essential areas: Public climate-relevant data sources, Geospatial + AI, Energy modeling, Software/hardware interfaces.
+
+
+
 **Climatebase Fellowship**    
-_March 2024 – Present (3 months)_
+_March 2024 – June 2024 (3 months)_
 
 Participating in Cohort 5 of the Climatebase Fellowship, the climate career accelerator.
 
