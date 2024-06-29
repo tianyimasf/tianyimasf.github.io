@@ -15,6 +15,14 @@ Here is a list of projects I've worked on and am currently building.
 
 ---
 
+## Electricity Demand & Generation
+
+- [Analysis Hex Notebook](https://app.hex.tech/22816b08-0e6f-4dd8-8bc7-fda1c98d25d4/hex/51ffde98-e71c-4dba-9d8a-f0e439a60755/draft/logic)
+
+![Viz from analysis](/Images/viz.png)
+
+---
+
 ## Analyzing Data
 
 - [List of Projects](/notebooks/analysis-projects.md)
@@ -68,7 +76,7 @@ Here is a list of projects I've worked on and am currently building.
 
 ## Serious stuff
 
----
+---27, 343,  2197,  6859,  24389
 
 ## Education
 
