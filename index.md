@@ -60,6 +60,16 @@ Here is a list of projects I've worked on and am currently building.
 
 ---
 
+## Lecture Notes
+
+---
+
+## MATH4520 Mathematical Statistics Summer 2024 CU Boulder 
+
+- [Chap 2](/lecturenotes/mathematical-statistics-chap2.md)
+
+---
+
 ## Random things about me
 
 ---
