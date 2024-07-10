@@ -66,7 +66,7 @@ Here is a list of projects I've worked on and am currently building.
 
 ## MATH4520 Mathematical Statistics Summer 2024 CU Boulder 
 
-- [Chap 2](/lecturenotes/mathematical-statistics-chap2.md)
+- [Chap 2](https://tianyimasf.github.io/ai/mathematical-statistics-chap2/)
 
 ---
 
