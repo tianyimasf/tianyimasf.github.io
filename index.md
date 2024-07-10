@@ -86,7 +86,7 @@ Here is a list of projects I've worked on and am currently building.
 
 ## Serious stuff
 
----27, 343,  2197,  6859,  24389
+---
 
 ## Education
 
