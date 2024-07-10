@@ -2,4 +2,4 @@ name: Tianyi Ma (Alex)
 title: Tianyi Ma
 logo: Images/profile.jpg
 theme: jekyll-theme-minimal
-mathjax: true
+usemathjax: true
