@@ -68,6 +68,7 @@ Here is a list of projects I've worked on and am currently building.
 
 - [Chap 2](https://tianyimasf.github.io/ai/mathematical-statistics-chap2/)
 - [Chap 3](https://tianyimasf.github.io/ai/mathematical-statistics-chap3/)
+- [Chap 4](https://tianyimasf.github.io/ai/mathematical-statistics-chap4/)
 
 ---
 
