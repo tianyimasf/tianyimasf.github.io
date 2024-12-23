@@ -1,80 +1,66 @@
-# Alex's world of fun coding projects.
+# Alex's Homepage
 
+![pfp](images/pfp.jpg)
 
-## Welcome!
+## Hi there 👋, I'm alex. 
 
-Hello there! I'm Tianyi Ma, I go by Alex. I'm full of ideas and love to spend my spare time doing fun side coding projects. You can find them here. 
-
-Don't be fooled by how I call them -- they are fun side projects but they also help me practice a wide range of skills: from exploratory data analysis, to data visualization, to predictive machine learning, image processing, web dev, ... It's a whole new world out there and they always keep me learning! Even they are fun projects, they are by no means useless.
-
-Here is a list of projects I've worked on and am currently building.
+Methodical applied mathematician and seasoned programmer with extensive experience in optimization research and end-to-end business process improvements and developments. Starting from undergraduate research and post-graduate software engineering at an AI startup, I pivoted to working on building sustainability and power grid optimization with future interests in similar fields in addition to data-driven environmental anthropology.
 
 ---
 
 ## Projects
 
----
+**Microgrid Design Assistant**: A flexibale and fast Python program using cvxpy to optimize for costs of DER (Distributed Energy Resources) and microgrid autonomy and resiliency for a given load demand profile and target renewable resource unit. [Github](https://github.com/tianyimasf/microgrid-design-assistant) | [Paper] (https://drive.google.com/file/d/1_ewfbdYHzW9uIgzbXxjGDslFlMExmi1N/view?usp=sharing)
 
-## Electricity Demand & Generation
+**Electricity Impact of a Typical Single-Family Home in Delhi**: A data-driven report on the mentioned topic after conducting the background and literature research. [Report](https://drive.google.com/file/d/1CwOXd4A1G-ywm68rSRB1-0W4NzBqG49n/view?usp=sharing)
 
-- [Analysis Hex Notebook](https://app.hex.tech/22816b08-0e6f-4dd8-8bc7-fda1c98d25d4/hex/51ffde98-e71c-4dba-9d8a-f0e439a60755/draft/logic)
+![student help]("images/ask what can we do to help answers.png")
 
-![Viz from analysis](/Images/viz.png)
-
----
-
-## Analyzing Data
-
-- [List of Projects](/notebooks/analysis-projects.md)
-
-![Music Genre Feature Analysis](/Images/valence_viz.png)
-
-![Viz from analysis](/Images/job_title_viz.png)
+**Educational Program Outcome Analysis**: Used numerical processing libriaries Pandas and numpy, machine learning libraries scikit-learn and its model kMeans clustering, language processing libaries nltk, gensim, and sentence_transformer and plotting libraries matplotlib and seaborn, converted student result surveys to numerical representations and then found latent clusters representing topics mentioned in the surveys. Surfaced specific familial, mental and material issues students are facing and improved on some previous general problem classifications. Furthermore, analyzed grade level, graduation obstacle and family status’s impact on attendance rates. 
 
 ---
 
-## Coursera Marketplace Dataset 2023 (~1500 downloads)
+## Education
 
-- [Dataset](https://www.kaggle.com/datasets/tianyimasf/coursera-course-dataset)
+**M.S. in Applied Mathematics, Data Science and Statistics Track**  
+_University of Colorado, Boulder (graduating 2026)_ 
 
-- [Github](https://github.com/tianyimasf/tidy-tuesday-social-dataset-analysis/blob/main/scrapping_coursera.py)
-
-![Coursera Dataset](/Images/dataset-cover.jpg)
-
----
-
-## Learning notes for Deep Learning with Pytorch
-
-- [Codebooks](https://github.com/tianyimasf/deep-learning-pytorch)
-
-![Codebook](/Images/code.png)
+**B.S. in Mathematics, Minor in Computer Science**  
+_University of Rochester_  
 
 ---
 
-## Ongoing Project
+##  Work Experiences
 
-- Bird Soundscape based on [Ebird](https://ebird.org/) data [\[Github\]](https://github.com/tianyimasf/bird-sound-scape/blob/main/data%20preprocessing.ipynb)
-- Image Toys based on [Brown University's Computational Photography course](https://browncsci1290.github.io/webpage/#H2_12)
-- Kindle Wrap: a visual summary of your kindle activities last year
-- Geospatial analysis: maps and data
+**Environmental Data Analyst Intern @ Mercy Housing, Green Hope Team**    
+_September 2024 - Present (4 months)_
 
----
+Using data analysis to support reducing water and electricity usage.
 
-## Lecture Notes
+**Research Assistant @ Prof. Daniel Acuña Science of Science Lab, CU Boulder**
+_June 2023 – October 2023 (4 months)_
 
----
+Investigated racial and gender biases in generative AI models by generating images for people descriptions in English and Chinese across gender, occupation and social contexts. Analyzed and compared the classification result statistics to real world census data and discovered that the models almost uniformly amplified existing biases in the real world drastically. Detailed the data preparation process, algorithmic differences in chosen models and findings in a research paper.
 
-## MATH4520 Mathematical Statistics Summer 2024 CU Boulder 
+**Software Engineer**  
+_April 2022 - March 2023 (1 year)_
 
-- [Chap 2](https://tianyimasf.github.io/ai/mathematical-statistics-chap2/)
-- [Chap 3](https://tianyimasf.github.io/ai/mathematical-statistics-chap3/)
-- [Chap 4](https://tianyimasf.github.io/ai/mathematical-statistics-chap4/)
+Provided an accurate, consistent and easily-interpretable new process that replaced the overly complicated old manual process of configuring task pricing schemes that’s prone to error. As a result of the payout consistency, the number of payout debugging tickets for the target tasker types are reduced to close to 0 and overall tasker payout cost is reduced 35%.
 
 ---
 
-## Random things about me
+##  Skills
+
+- **Programming Languages**: (Fluent) Python, TypeScript, (Intermediate) R, SQL, C/C++ 
+- **Libraries**: pandas, numpy, scikit-learn, Pytorch, scipy, matplotlib, seaborn
+- **Version Control**: Git
+- **Software**: LATEX, Office Suite (Excel, Word, PowerPoint), Looker Studio
+- **Languages**: Mandarin (native), English (bilingual) 
+- **Interests**: Gaming, Reading, Photography and Beauty
 
 ---
+
+## Fun Stuff
 
 - I keep 3 cats with my husband. Their name is Butter, River, and Smudge. 
 
@@ -86,74 +72,11 @@ Here is a list of projects I've worked on and am currently building.
 
 ---
 
-## Serious stuff
-
----
-
-## Education
-
-**B.S. in Mathematics, Minor in Computer Science**  
-_University of Rochester_  
-
-**M.S. in Applied Mathematics**  
-_University of Colorado, Boulder (graduating 2026)_  
-
-
----
-
-##  Work Experience
-
-**Terra.do: Software for Climate Course**    
-_June 2024 - Present (1 months)_
-
-An 8-week online course that unlocks student potential in building software for climate tech. Covers 4 essential areas: Public climate-relevant data sources, Geospatial + AI, Energy modeling, Software/hardware interfaces.
-
-
-
-**Climatebase Fellowship**    
-_March 2024 – June 2024 (3 months)_
-
-Participating in Cohort 5 of the Climatebase Fellowship, the climate career accelerator.
-
-
-
-**Software Engineer**  
-_Scale AI, a data labeling SaaS unicorn startup at the bay area_  
-_April 2022 - March 2023 (1 year)_
-
-Led a project that deployed a price prediction linear regression model that handled the payment calculation for the company's data labeling workforce, around 40k-50k workers, and saved 10% labor cost.
-
----
-
-##  Skills
-
-- **Data Analysis Software**: Microsoft Excel, Tableau
-- **Programming Languages**: Python, R, SQL, TypeScript, Java, C/C++
-- **Software Framework and Libraries**: React, NodeJS, Django, Pandas, NumPy, scikit-learn, selenium, BeautifulSoup
-- **Database**: MongoDB, Postgresql
-- **Cloud Technology**: GCP, AWS Lambda, s3, step function, Docker
-- **Business**: Agile Dev, Lean Startup
-
----
-
-##  Strengths
-
-- Curiosity
-- Proactive problem solver
-- Attention to detail
-- Organized
-- Fast skill learning
-- Effective communication
-- Work with teams
-
----
-
 ##  Contact
 
-For more information or inquiries, reach out to me on:
 * Email: <a href="mailto:alex.ma@colorado.edu">Alex's email</a>
 * GitHub: [@tianyimasf](https://github.com/tianyimasf)
-* <a href="https://tianyimasf.github.io/ai/">Blog</a>
+* <a href="https://www.linkedin.com/in/alex-tianyi-ma/">LinkedIn</a>
 
 
 
