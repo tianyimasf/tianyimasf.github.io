@@ -1,0 +1,37 @@
+# End of Year Reflection 2024
+
+### Relationships
+
+Today is 12/23/2024, a day before christmas. Ever since I married Daniel, end of year has had an additional layer of meaning - that is - his birthday! 
+
+I know that people who have birthdays end of the year usually don't get to celebrate it growing up. So I made extra efforts to recognize it. In the process of thinking about how to celebrate it with him, I remembered a romance anime I watched this year. The girl protagonist has her birthday around Christmas as well. So the boy took her to an ice rink in a recreational park. All the lights are shining and it was magical when he arm carried her, eye to eye. He wasn't very loved in his childhood and didn't get attention from his parents, so he wanted it to be special for her. I kept thinking about it when I planned for Daniel's birthday. 
+
+In the end, because I wasn't feeling great in the morning, we didn't end up going to the thing I planned in the early afternoon. However, I did bought everything I need to make the "magical" dinner for him, so I spent most of my days making a gochujang fried chicken burger with handmade pickled carrots and white sauce made from scratch with greek yogurt. I also made another big appetizer sandwhich, a bit like a caprese but with prosciutto and fig spread. Finally, I made baked potato and a light cheesecake. They turned out well, I think.
+
+Before I married Daniel, I never could have done anything like this for another person. Ever since I married him, I became more vocal about expressing love for people around me, and doing things for them and buy gifts that reminded me of them. I used to think these are too materialistic and preferred quality time as my primary love language. But over time, with influence from his family, I also learned to express my love more directly and really pay attention to the other person instead of thinking too much of myself. I'm also having more fun this way. 
+
+This year, we also went back to his family for thanksgiving. It was such a nice week filled with family time, board games and love. I felt blessed to become part of his family.
+
+Initially, I was going to reflect on the past year by interviewing my best friend from high school, and we did do the interview. Unfortunately, it was my first time recording and I forgot to record the audio. Since we're not at the same continent, we used Zoom and I only recorded the screen.
+
+Feeling ashamed and didn't want to ask again, I decided to do it this way. I wanted to speak Chinese in my interview so I can't interview with Daniel, and my other Chinese friend doesn't like appearing in videos. I used to like talking by myself in front of a camera, but now I just felt like I'm one-sidedly info dumping and it was not fair for the audience. Therefore I decided to reflect in the form of writing.
+
+Another part of my social life this year is my master's program cohort. I haven't had a regular group of friends since college. Since the start of semester, we've been meeting every Friday to have lunch together, and me and another girl have been going to gym classes together. We've had holiday parties for halloween and christmas/end-of-semester, and I feel like I've been getting to know each of them and also the friendship culture in the US more and more. It was good to have someone to talk to whenever the classes get hard. They're all good people, you'd like them. (anyone recognize the reference?)
+
+### Work/Career
+
+The biggest lesson this year is to honor commitment. One of my biggest problems is overcommitment and in the end not being able to do well on anything. I have both improved on this and sufferred because of this year. Officially, I only had 2 classes. However, they're both grad classes, and I'm also working part-time for 20hrs/week. This essentially means that I don't have any time in the afternoons to do school and have to commit extra time to finish school work. I don't think I did it very well. I have another 2 grad classes and the same part-time job next semester, but I'm going to try to push myself more to work after hours and during Fridays/weekends and not taking a bunch of time off. Basically, push myself more.
+
+One reason for this problem is also that I used to think I'm still being heavily affected by my mental health issues and need to take it easy. I'm always too concerned with the question "am I working too hard?" when I'm working but not feeling it out. After pushing myself and grinding the final's week, the lesson I learned is that you can't think really hard and get an answer to that question. What you do is you try your best and stop when it feels like too much. Having learned this, it'll be easier next semester because I can just try my best to do what needs to be done. That way, I won't over work myself but I'm also not under working myself and leaving regrets.
+
+I did benefit from the classes I took. One other lesson I learned is that quality work requires patience. In the past, whenever I wanted to work on a topic, I'll pull up some tutorials or papers online, read them and assume it's enough to proceed to work on the project. This semester, I was taking a class about power grid optimization. The class wasn't too much over the semester except one project in the middle, but the power of cumulated knowledge truly shined when I was trying to do the final project. For that, I was supposed to answer a power grid research question through mathematical optimiation. When I was doing the project, everything I've ever learned in the class came together to form a really scientifically sound paper. The reasoning is meticulous, the calculations are consistent and the presentation was clean and organized. I used a lot of the skills I learned through the course slides and assignments. Even if I didn't get the perfect score for a lot of the assignments, I learned why I didn't provide the best answer and improved on that. Watching all of that coming into fruitation is such a great feeling. This really made me understand that you need to learn the topic pretty thoroughly before you do anything, and patience results in high quality work.
+
+### Future
+
+Next year will be another exciting year for me. First, I'm going to learn so many new things. I have next semester a seminar course about machine learning applications in ecology which I'm really excited about. In the second year I'm going to take a geospatial machine learning seminar class with one of the most popular professor in the comp sci department. I'm applying for Santa Fe Institute's summer school to study complex system, which is an area of my interest for the longest time. I'm expecting to connect with other researchers in that field and collaborate which is also very exciting. 
+
+Secondly, I'm going to do my master's research thesis, startup projects and hopefully an internship. I also want to do another research project, but I haven't found an advisor yet. Using my spare time, I'm looking to extend my final project for the power grid class. I'm looking for advisors/collaborators for that one too. Over this winter break, I'm going through the book Machine Learning Using Pytorch and Scikit-learn and practicing Pytorch.
+
+Overall a lot of things are coming and I'm really looking forward to it!
+
+Goodbye 2024, you've treated me well. ily. 
