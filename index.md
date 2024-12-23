@@ -32,10 +32,9 @@ _University of Rochester_
 
 **Environmental Data Analyst Intern @ Mercy Housing, Green Hope Team**    
 _September 2024 - Present (4 months)_
-
 Using data analysis to support reducing water and electricity usage.
 
-**Research Assistant @ Prof. Daniel Acuña Science of Science Lab, CU Boulder**
+**Research Assistant @ Prof. Daniel Acuña Science of Science Lab, CU Boulder**  
 _June 2023 – October 2023 (4 months)_
 
 Investigated racial and gender biases in generative AI models by generating images for people descriptions in English and Chinese across gender, occupation and social contexts. Analyzed and compared the classification result statistics to real world census data and discovered that the models almost uniformly amplified existing biases in the real world drastically. Detailed the data preparation process, algorithmic differences in chosen models and findings in a research paper.
