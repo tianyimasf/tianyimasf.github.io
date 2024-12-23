@@ -31,7 +31,7 @@ _University of Rochester_
 ##  Work Experiences
 
 **Environmental Data Analyst Intern @ Mercy Housing, Green Hope Team**    
-_September 2024 - Present (4 months)_
+_September 2024 - Present (4 months)_  
 Using data analysis to support reducing water and electricity usage.
 
 **Research Assistant @ Prof. Daniel Acuña Science of Science Lab, CU Boulder**  
