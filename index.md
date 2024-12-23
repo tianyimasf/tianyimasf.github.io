@@ -1,7 +1,5 @@
 # Alex's Homepage
 
-![pfp](images/pfp.jpg)
-
 ## Hi there 👋, I'm alex. 
 
 Methodical applied mathematician and seasoned programmer with extensive experience in optimization research and end-to-end business process improvements and developments. Starting from undergraduate research and post-graduate software engineering at an AI startup, I pivoted to working on building sustainability and power grid optimization with future interests in similar fields in addition to data-driven environmental anthropology.
@@ -10,11 +8,11 @@ Methodical applied mathematician and seasoned programmer with extensive experien
 
 ## Projects
 
-**Microgrid Design Assistant**: A flexibale and fast Python program using cvxpy to optimize for costs of DER (Distributed Energy Resources) and microgrid autonomy and resiliency for a given load demand profile and target renewable resource unit. [Github](https://github.com/tianyimasf/microgrid-design-assistant) | [Paper] (https://drive.google.com/file/d/1_ewfbdYHzW9uIgzbXxjGDslFlMExmi1N/view?usp=sharing)
+**Microgrid Design Assistant**: A flexibale and fast Python program using cvxpy to optimize for costs of DER (Distributed Energy Resources) and microgrid autonomy and resiliency for a given load demand profile and target renewable resource unit. [Code](notebooks/microgrid-dev.html) [Paper](https://drive.google.com/file/d/1_ewfbdYHzW9uIgzbXxjGDslFlMExmi1N/view?usp=sharing) [Github](https://github.com/tianyimasf/microgrid-design-assistant)
 
 **Electricity Impact of a Typical Single-Family Home in Delhi**: A data-driven report on the mentioned topic after conducting the background and literature research. [Report](https://drive.google.com/file/d/1CwOXd4A1G-ywm68rSRB1-0W4NzBqG49n/view?usp=sharing)
 
-![student help]("images/ask what can we do to help answers.png")
+![student help]("Images/ask what can we do to help answers.png")
 
 **Educational Program Outcome Analysis**: Used numerical processing libriaries Pandas and numpy, machine learning libraries scikit-learn and its model kMeans clustering, language processing libaries nltk, gensim, and sentence_transformer and plotting libraries matplotlib and seaborn, converted student result surveys to numerical representations and then found latent clusters representing topics mentioned in the surveys. Surfaced specific familial, mental and material issues students are facing and improved on some previous general problem classifications. Furthermore, analyzed grade level, graduation obstacle and family status’s impact on attendance rates. 
 
@@ -67,8 +65,6 @@ Provided an accurate, consistent and easily-interpretable new process that repla
 - I lived in Beijing, China until 18 and came to America. My high school is 20 min walk away from the Ti'anmen Square.
 
 - I have my mom's surname.
-
-- Music is my life.
 
 ---
 
