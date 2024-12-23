@@ -39,7 +39,7 @@ _June 2023 – October 2023 (4 months)_
 
 Investigated racial and gender biases in generative AI models by generating images for people descriptions in English and Chinese across gender, occupation and social contexts. Analyzed and compared the classification result statistics to real world census data and discovered that the models almost uniformly amplified existing biases in the real world drastically. Detailed the data preparation process, algorithmic differences in chosen models and findings in a research paper.
 
-**Software Engineer**  
+**Software Engineer @ Scale AI**  
 _April 2022 - March 2023 (1 year)_
 
 Provided an accurate, consistent and easily-interpretable new process that replaced the overly complicated old manual process of configuring task pricing schemes that’s prone to error. As a result of the payout consistency, the number of payout debugging tickets for the target tasker types are reduced to close to 0 and overall tasker payout cost is reduced 35%.
