@@ -8,6 +8,8 @@ Methodical applied mathematician and seasoned programmer with extensive experien
 
 ## Projects & Essays
 
+[**A Chill Christmas** (click!)](notebooks/a_chill_christmas.md) \| 12/28/2024
+
 [**Goodbye, 2024** (click!)](notebooks/end_of_year_reflection.md) \| 12/23/2024
 
 **Microgrid Design Assistant**: A flexibale and fast Python program using cvxpy to optimize for costs of DER (Distributed Energy Resources) and microgrid autonomy and resiliency for a given load demand profile and target renewable resource unit. [Code](notebooks/microgrid-dev.html) [Paper](https://drive.google.com/file/d/1_ewfbdYHzW9uIgzbXxjGDslFlMExmi1N/view?usp=sharing) [Github](https://github.com/tianyimasf/microgrid-design-assistant)
