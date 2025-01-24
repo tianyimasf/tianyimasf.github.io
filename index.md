@@ -6,7 +6,11 @@ Methodical applied mathematician and seasoned programmer with extensive experien
 
 ---
 
-## Projects & Essays
+## Projects & Essays (Chronologically)
+
+[**Data Science Projects**](notebooks/ai-for-good-projects.md)
+
+**To-do Cup**: a web app that create a competition within friends to complete your todo list in the end. Built in React TypeScript, Node.js and MongoDB Community. [Github](https://github.com/tianyimasf/todo-cup)
 
 [**Goodbye, 2024** (click!)](notebooks/end_of_year_reflection.md) \| 12/23/2024
 
@@ -62,9 +66,7 @@ Provided an accurate, consistent and easily-interpretable new process that repla
 ## Fun Stuff
 
 - I keep 3 cats with my husband. Their name is Butter, River, and Smudge. 
-
 - I lived in Beijing, China until 18 and came to America. My high school is 20 min walk away from the Ti'anmen Square.
-
 - I have my mom's surname.
 
 ---
