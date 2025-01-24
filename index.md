@@ -10,7 +10,7 @@ Methodical applied mathematician and seasoned programmer with extensive experien
 
 [**Data Science Projects** (click!)](notebooks/ai-for-good-projects.md)
 
-**To-do Cup**: a web app that create a competition within friends to complete your todo list in the end. Built in React TypeScript, Node.js and MongoDB Community. [Github](https://github.com/tianyimasf/todo-cup)
+**To-do Cup**: a web app that create a competition within friends to complete your todo list. Built in React TypeScript, Node.js and MongoDB Community. [Github](https://github.com/tianyimasf/todo-cup)
 
 [**A Chill Christmas** (click!)](notebooks/a_chill_christmas.md) \| 12/28/2024
 
