@@ -20,10 +20,6 @@ Methodical applied mathematician and seasoned programmer with extensive experien
 
 **Electricity Impact of a Typical Single-Family Home in Delhi**: A data-driven report on the mentioned topic after conducting the background and literature research. [Report](https://drive.google.com/file/d/1CwOXd4A1G-ywm68rSRB1-0W4NzBqG49n/view?usp=sharing)
 
-![student help](Images/student_help.png)
-
-**Educational Program Outcome Analysis**: Used numerical processing libriaries Pandas and numpy, machine learning libraries scikit-learn and its model kMeans clustering, language processing libaries nltk, gensim, and sentence_transformer and plotting libraries matplotlib and seaborn, converted student result surveys to numerical representations and then found latent clusters representing topics mentioned in the surveys. Surfaced specific familial, mental and material issues students are facing and improved on some previous general problem classifications. Furthermore, analyzed grade level, graduation obstacle and family status’s impact on attendance rates. 
-
 ---
 
 ## Education
