@@ -12,7 +12,7 @@ Some poem:
 
 ### Income Classification MLP (*All code starts at 'Submission')
 
-[Kaggle](https://www.kaggle.com/code/tianyimasf/mlp-alex-ma#Submission)
+[Kaggle](https://www.kaggle.com/code/tianyimasf/mlp-alex-ma)
 
 ![image](../Images/7.png)
 

@@ -12,7 +12,7 @@ I love data science and AI and I'm always reading about them and applying them t
 
 ## ‼️ News 
 
-[**Data Science Projects** (click!)](notebooks/ai-for-good-projects.md)
+[**Data Science Projects** (click!)](ai-for-good-projects.md)
 
 [**A Chill Christmas**](notebooks/a_chill_christmas.md) \| 12/28/2024
 
