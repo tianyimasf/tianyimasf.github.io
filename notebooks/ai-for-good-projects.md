@@ -2,19 +2,52 @@
 
 ---
 
-### MLP
+![image](../Images/15.png)
 
-[Kaggle (scoll down to "Submission")](https://www.kaggle.com/code/tianyimasf/mlp-alex-ma#Submission)
+---
 
-- using a significantly smaller model that turned out to be as predictive as a big model
-- shorter training epochs don’t meaningfully affect accuracy either
-- compared popular classical ML models and gradient boosting trees (expectedly) outperformed the neural network, especially Catboost
-- finally, examined feature importances using permutation, Salient Maps (Gradient-based) and SHAP values.
-- discovered that most people earning less than 50k yearly are widows.
+![image](../Images/26.png)
+![image](../Images/27.png)
+![image](../Images/28.png)
+
+### Wheat Price Shock Forecast during Russian-Ukraine War
+
+[Kaggle](https://www.kaggle.com/code/tianyimasf/wheat-price-shock-forecast)
+
+![image](../Images/18.png)
+![image](../Images/17.png)
 
 ### GeoML: EuroSAT Land Cover Classification using CNN
 
 [Kaggle](https://www.kaggle.com/code/tianyimasf/geoml-land-cover-cnn-classification)
 
-- Using grid search, experimented with various batch sizes, workers, epochs, learning rates and pre-trained models. 
-- Achieved 98.98% accuracy with Resnet50 Moco, 32 batch size, 1e-4 learning rate, and 15 epochs.
+![image](../Images/23.png)
+![image](../Images/24.png)
+
+### Pulling & Visualizing Wealth & Poverty Data
+
+[Kaggle](https://www.kaggle.com/code/tianyimasf/pulling-visualizing-wealth-poverty-data)
+
+![image](../Images/20.png)
+
+### Collaborative Filtering for Agricultural Commodities
+
+[Kaggle](https://www.kaggle.com/code/tianyimasf/collaborative-filtering-agricultural-commoditites)
+
+![image](../Images/25.png)
+
+### Predicting Wealth & Poverty with SatCLIP
+
+[Kaggle](https://www.kaggle.com/code/tianyimasf/predicting-wealth-poverty-with-satclip)
+
+![image](../Images/7.png)
+
+### Income Classification MLP (*All code starts at 'Submission')
+
+[Kaggle](https://www.kaggle.com/code/tianyimasf/mlp-alex-ma#Submission)
+
+![image](../Images/21.png)
+
+### Autoencoders for Climate Embeddings
+
+[Kaggle](https://www.kaggle.com/code/tianyimasf/autoencoders-for-climate-embeddings)

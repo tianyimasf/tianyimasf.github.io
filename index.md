@@ -1,79 +1,66 @@
-# Alex's Homepage
+# Alex Ma 马天一's Homepage
 
-## Hi there 👋, I'm alex. 
+## Hi there 👋, I'm Alex. 
 
-Methodical applied mathematician and seasoned programmer with extensive experience in optimization research and end-to-end business process improvements and developments. Starting from undergraduate research and post-graduate software engineering at an AI startup, I pivoted to working on building sustainability and power grid optimization with future interests in similar fields in addition to data-driven environmental anthropology.
+I'm originally from China and came to the US for college in 2016. After getting a math degree, bipolar along with it (?), working for a unicorn startup in SF for a year and taking a career break, I'm now in school for a graduate degree in statistics to work on sustainability after graduation. I love data science and AI and I'm always reading about them and applying them to solve various geospatial problems. In my spare time, I watch shows and eat out with my friends and husband. 
 
 ---
 
-## Projects & Essays (Chronologically)
+## ‼️ News 
 
 [**Data Science Projects** (click!)](notebooks/ai-for-good-projects.md)
-
-**To-do Cup**: a web app that create a competition within friends to complete your todo list. Built in React TypeScript, Node.js and MongoDB Community. [Github](https://github.com/tianyimasf/todo-cup)
 
 [**A Chill Christmas**](notebooks/a_chill_christmas.md) \| 12/28/2024
 
 [**Goodbye, 2024**](notebooks/end_of_year_reflection.md) \| 12/23/2024
 
-**Microgrid Design Assistant**: A flexibale and fast Python program using cvxpy to optimize for costs of DER (Distributed Energy Resources) and microgrid autonomy and resiliency for a given load demand profile and target renewable resource unit. [Code](notebooks/microgrid-dev.html) [Paper](https://drive.google.com/file/d/1_ewfbdYHzW9uIgzbXxjGDslFlMExmi1N/view?usp=sharing) [Github](https://github.com/tianyimasf/microgrid-design-assistant)
+---
 
-**Electricity Impact of a Typical Single-Family Home in Delhi**: A data-driven report on the mentioned topic after conducting the background and literature research. [Report](https://drive.google.com/file/d/1CwOXd4A1G-ywm68rSRB1-0W4NzBqG49n/view?usp=sharing)
+## 🖼️ Pretty Pictures
+
+**Demographics of Income Class** 
+
+In this project we experimented with using MLP and demographic data to predcit income class. Even with a basic task like this, the data could be very interesting. While plotting feature importance, I became curious to disentangle the correlation between the age and marital status feature. The graph shows the shocking fact that most widows across age groups earn less than 50k/year.
+
+![cluster](/Images/8.png)
+
+**Wheat Price Time Series 2019 -- 2022**  
+
+This is a project I did to predict wheat price shock at the start of the Russian-Ukraine war. The dataset is on individual market-level and I did exploratory data analysis to understand the dataset. Here is what I found by clustering the latitude and longitude associated with each market. 
+
+![cluster](/Images/1.png)
+
+After clustering the markets, now if we plot the average price for each cluster, we have the following graphs for wheat flour and imported wheat flour. 
+
+![cluster](/Images/2.png)
+![cluster](/Images/3.png)
+
+It shows that the price clearly differs within each geographical cluster. It shows that the markets associated with blue and green clusters have high prices for both commodity, which correspond to eatern european, middle eastern and south african countries. 
+
+**Current v.s. Future Weather in the map** 
+
+Based on a global climate map, I randomly picked a location and found the top 10 locations in the future of which their climates are most similar to the selected location's climate right now based on the map. We have 3 variables for this map, which are mapped to the three visible light color channels, red for mean temp, green for isothermality, and blue for precipitation.
+
+![cluster](/Images/9.png)
+![cluster](/Images/10.png)
+![cluster](/Images/14.png)
+
+**Poverty Prediction Error Analysis**  
+
+We attempted to predict poverity level using satellite image embedding. I created several plots to analyze model error. 
+
+![cluster](/Images/4.png)
+
+This shows that Ridge Regression model actually gives much more nuanced, interesting predictions than an ANN MLP model. 
 
 ---
 
-## Education
+## 🤙 Contact
 
-**M.S. in Applied Mathematics, Data Science and Statistics Track**  
-_University of Colorado, Boulder (graduating 2026)_ 
-
-**B.S. in Mathematics, Minor in Computer Science**  
-_University of Rochester_  
-
----
-
-##  Work Experiences
-
-**Environmental Data Analyst Intern @ Mercy Housing, Green Hope Team**    
-_September 2024 - Present (4 months)_  
-Using data analysis to support reducing water and electricity usage.
-
-**Research Assistant @ Prof. Daniel Acuña Science of Science Lab, CU Boulder**  
-_June 2023 – October 2023 (4 months)_
-
-Investigated racial and gender biases in generative AI models by generating images for people descriptions in English and Chinese across gender, occupation and social contexts. Analyzed and compared the classification result statistics to real world census data and discovered that the models almost uniformly amplified existing biases in the real world drastically. Detailed the data preparation process, algorithmic differences in chosen models and findings in a research paper.
-
-**Software Engineer @ Scale AI**  
-_April 2022 - March 2023 (1 year)_
-
-Provided an accurate, consistent and easily-interpretable new process that replaced the overly complicated old manual process of configuring task pricing schemes that’s prone to error. As a result of the payout consistency, the number of payout debugging tickets for the target tasker types are reduced to close to 0 and overall tasker payout cost is reduced 35%.
-
----
-
-##  Skills
-
-- **Programming Languages**: (Fluent) Python, TypeScript, (Intermediate) R, SQL, C/C++ 
-- **Libraries**: pandas, numpy, scikit-learn, Pytorch, scipy, matplotlib, seaborn
-- **Version Control**: Git
-- **Software**: LATEX, Office Suite (Excel, Word, PowerPoint), Looker Studio
-- **Languages**: Mandarin (native), English (bilingual) 
-- **Interests**: Gaming, Reading, Photography and Beauty
-
----
-
-## Fun Stuff
-
-- I keep 3 cats with my husband. Their name is Butter, River, and Smudge. 
-- I lived in Beijing, China until 18 and came to America. My high school is 20 min walk away from the Ti'anmen Square.
-- I have my mom's surname.
-
----
-
-##  Contact
-
-* Email: <a href="mailto:alex.ma@colorado.edu">Alex's email</a>
-* GitHub: [@tianyimasf](https://github.com/tianyimasf)
-* <a href="https://www.linkedin.com/in/alex-tianyi-ma/">LinkedIn</a>
+* [Resume](https://drive.google.com/file/d/10dPkTfurZfe_VVWXdkHDjiBRYgWwUX4a/view?usp=sharing)
+* [Email] (mailto: tianyi437@gmail.com)
+* [LinkedIn](https://www.linkedin.com/in/alex-tianyi-ma/)
+* [@tianyimasf](https://github.com/tianyimasf)
 
 
 
