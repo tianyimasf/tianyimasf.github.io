@@ -1,8 +1,12 @@
 # Alex Ma 马天一's Homepage
 
-## Hi there 👋, I'm Alex. 
+---
 
-I'm originally from China and came to the US for college in 2016. After getting a math degree, bipolar along with it (?), working for a unicorn startup in SF for a year and taking a career break, I'm now in school for a graduate degree in statistics to work on sustainability after graduation. I love data science and AI and I'm always reading about them and applying them to solve various geospatial problems. In my spare time, I watch shows and eat out with my friends and husband. 
+## 👋 Hello there, I'm Alex
+
+I'm originally from China and came to the US for college in 2016. After getting a math degree, bipolar along with it (?), working for a unicorn startup in SF for a year and taking a career break, I'm now in school for a graduate degree in statistics to work on sustainability after graduation. 
+
+I love data science and AI and I'm always reading about them and applying them to solve various geospatial problems. In my spare time, I watch shows and eat out with my friends and husband. 
 
 ---
 
@@ -22,7 +26,7 @@ I'm originally from China and came to the US for college in 2016. After getting 
 
 In this project we experimented with using MLP and demographic data to predcit income class. Even with a basic task like this, the data could be very interesting. While plotting feature importance, I became curious to disentangle the correlation between the age and marital status feature. The graph shows the shocking fact that most widows across age groups earn less than 50k/year.
 
-![cluster](/Images/8.png)
+![cluster](/Images/7.png)
 
 **Wheat Price Time Series 2019 -- 2022**  
 
@@ -57,10 +61,8 @@ This shows that Ridge Regression model actually gives much more nuanced, interes
 
 ## 🤙 Contact
 
-* [Resume](https://drive.google.com/file/d/10dPkTfurZfe_VVWXdkHDjiBRYgWwUX4a/view?usp=sharing)
-* [Email] (mailto: tianyi437@gmail.com)
-* [LinkedIn](https://www.linkedin.com/in/alex-tianyi-ma/)
-* [@tianyimasf](https://github.com/tianyimasf)
+* [Resume](https://drive.google.com/file/d/10dPkTfurZfe_VVWXdkHDjiBRYgWwUX4a/view?usp=sharing) \| [LinkedIn](https://www.linkedin.com/in/alex-tianyi-ma/) \| <a href='mailto: tianyi437@gmail.com'> Email </a>
+* [Github @tianyimasf](https://github.com/tianyimasf)
 
 
 

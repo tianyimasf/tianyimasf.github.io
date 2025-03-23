@@ -1,7 +1,5 @@
 # tianyimasf.github.io
-This is a repository for my fun side projects.
+Alex's Homepage
 
-For more information or inquiries, reach out to me on:
-* Email: <a href="mailto:alex.ma@colorado.edu">Alex's email</a>
-* GitHub: [@oye-bobs](https://github.com/tianyimasf)
-* <a href="https://tianyimasf.github.io/ai/">Blog</a>
+* [Resume](https://drive.google.com/file/d/10dPkTfurZfe_VVWXdkHDjiBRYgWwUX4a/view?usp=sharing) \| [LinkedIn](https://www.linkedin.com/in/alex-tianyi-ma/) \| <a href='mailto: tianyi437@gmail.com'> Email </a>
+* [Github @tianyimasf](https://github.com/tianyimasf)
