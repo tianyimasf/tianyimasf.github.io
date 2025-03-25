@@ -43,7 +43,7 @@ It shows that the price clearly differs within each geographical cluster. It sho
 
 **Current v.s. Future Weather in the map** 
 
-Based on a global climate map, I randomly picked a location and found the top 10 locations in the future of which their climates are most similar to the selected location's climate right now based on the map. We have 3 variables for this map, which are mapped to the three visible light color channels, red for mean temp, green for isothermality, and blue for precipitation.
+Based on a global climate map, I randomly picked a location and found the top 10 locations in the future of which their climates are most similar to the selected location's climate right now based on the map. We have 3 variables for this map, which are mapped to the three visible light color channels, red for mean temp, green for isothermality, and blue for precipitation. Here, future locations are marked in purple and current location is marked in green blue.
 
 ![cluster](/Images/9.png)
 ![cluster](/Images/10.png)

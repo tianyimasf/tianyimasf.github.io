@@ -76,4 +76,6 @@ Satellite embeddings as input features.
 
 Explore climate embeddings: finding future locations (purple) with similar climate to current location (green blue). 
 
-![image](../Images/21.png)
+![cluster](/Images/9.png)
+![cluster](/Images/10.png)
+![cluster](/Images/14.png)
