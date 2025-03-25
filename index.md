@@ -4,7 +4,7 @@
 
 ## 👋 Hello there, I'm Alex
 
-I'm originally from China and came to the US for college in 2016. After getting a math degree, bipolar along with it (?), working for a unicorn startup in SF for a year and taking a career break, I'm now in school for a graduate degree in statistics to work on sustainability after graduation. 
+I'm originally from China and came to the US for college in 2016. After getting a math degree, working for a unicorn startup in SF for a year and taking a career break, I'm now in school for a graduate degree in statistics to work on sustainability after graduation. 
 
 I love data science and AI and I'm always reading about them and applying them to solve various geospatial problems. In my spare time, I watch shows and eat out with my friends and husband. 
 
