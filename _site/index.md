@@ -4,7 +4,7 @@
 
 ## 👋 Hello there, I'm Alex
 
-I'm originally from China and came to the US for college in 2016. After getting a math degree, bipolar along with it (?), working for a unicorn startup in SF for a year and taking a career break, I'm now in school for a graduate degree in statistics to work on sustainability after graduation. 
+I'm originally from China and came to the US for college in 2016. After getting a math degree, working for a unicorn startup in SF for a year and taking a career break, I'm now in school for a graduate degree in statistics to work on sustainability after graduation. 
 
 I love data science and AI and I'm always reading about them and applying them to solve various geospatial problems. In my spare time, I watch shows and eat out with my friends and husband. 
 
@@ -13,6 +13,8 @@ I love data science and AI and I'm always reading about them and applying them t
 ## ‼️ News 
 
 [**Data Science Projects** (click!)](ai-for-good-projects.md)
+
+[**A Mail To Myself**](notebooks/me.md) \| 03/24/2025
 
 [**A Chill Christmas**](notebooks/a_chill_christmas.md) \| 12/28/2024
 
@@ -43,7 +45,7 @@ It shows that the price clearly differs within each geographical cluster. It sho
 
 **Current v.s. Future Weather in the map** 
 
-Based on a global climate map, I randomly picked a location and found the top 10 locations in the future of which their climates are most similar to the selected location's climate right now based on the map. We have 3 variables for this map, which are mapped to the three visible light color channels, red for mean temp, green for isothermality, and blue for precipitation.
+Based on a global climate map, I randomly picked a location and found the top 10 locations in the future of which their climates are most similar to the selected location's climate right now based on the map. We have 3 variables for this map, which are mapped to the three visible light color channels, red for mean temp, green for isothermality, and blue for precipitation. Here, future locations are marked in purple and current location is marked in green blue.
 
 ![cluster](/Images/9.png)
 ![cluster](/Images/10.png)
