@@ -20,6 +20,8 @@ Proccessed raw geochemical soil data using geopandas and classified using xgboos
 
 ![image](../Images/31.png)
 
+---
+
 ### Income Classification MLP (*All code starts at 'Submission')
 
 [Kaggle](https://www.kaggle.com/code/tianyimasf/mlp-alex-ma)
