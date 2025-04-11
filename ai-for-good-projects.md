@@ -10,6 +10,16 @@ Some poem:
 
 ## Projects
 
+**All project code is hosted on Kaggle.**
+
+### Critical Mineral Presence/Absence Prediction Geodata Processing & XGBoost
+
+Proccessed raw geochemical soil data using geopandas and classified using xgboost.
+
+[Kaggle](https://www.kaggle.com/code/tianyimasf/create-geochemical-soil-dataset)
+
+![image](../Images/31.png)
+
 ### Income Classification MLP (*All code starts at 'Submission')
 
 [Kaggle](https://www.kaggle.com/code/tianyimasf/mlp-alex-ma)
