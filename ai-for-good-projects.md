@@ -15,6 +15,8 @@ Exploratory data analysis for regional sales and categorical variables. Mult-lin
 ![image](../Images/33.png)
 ![image](../Images/34.png)
 
+---
+
 ### Critical Mineral Presence/Absence Prediction Geodata Processing & XGBoost
 
 Classify critical mineral presence using xgboost and autoencoder embeddings created from global geochemical soil, whole rock and terrain data. (No kaggle codebook for ethical reasons)
@@ -22,7 +24,6 @@ Classify critical mineral presence using xgboost and autoencoder embeddings crea
 ![image](../Images/31.png)
 ![image](../Images/35.png)
 ![image](../Images/36.png)
-
 
 ---
 
