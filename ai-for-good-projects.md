@@ -2,23 +2,27 @@
 
 ---
 
-Some poem:
-
-![image](../Images/15.png)
-
----
-
 ## Projects
 
 **All project code is hosted on Kaggle.**
 
+### Video Game Sales Analysis And Modeling Using R
+
+Exploratory data analysis for regional sales and categorical variables. Mult-linear regression modeling followed by feature reduction, model statistical robustness diagnosis, model improvement using spline smoothing and GAM, two-part prediction and performance evaluation using confusion matrix, precision/recall/f1 and MSE.
+
+[Kaggle](https://www.kaggle.com/code/tianyimasf/r-feature-analysis-modeling)
+![image](../Images/32.png)
+![image](../Images/33.png)
+![image](../Images/34.png)
+
 ### Critical Mineral Presence/Absence Prediction Geodata Processing & XGBoost
 
-Proccessed raw geochemical soil data using geopandas and classified using xgboost.
-
-[Kaggle](https://www.kaggle.com/code/tianyimasf/create-geochemical-soil-dataset)
+Classify critical mineral presence using xgboost and autoencoder embeddings created from global geochemical soil, whole rock and terrain data. (No kaggle codebook for ethical reasons)
 
 ![image](../Images/31.png)
+![image](../Images/35.png)
+![image](../Images/36.png)
+
 
 ---
 
