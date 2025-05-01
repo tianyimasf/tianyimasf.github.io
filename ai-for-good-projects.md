@@ -2,8 +2,6 @@
 
 ---
 
-## Projects
-
 **All project code is hosted on Kaggle.**
 
 ### Video Game Sales Analysis And Modeling Using R
