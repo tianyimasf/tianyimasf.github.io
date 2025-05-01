@@ -8,9 +8,12 @@
 
 ### Video Game Sales Analysis And Modeling Using R
 
+Paper section in the end of the notebook.
+
 Exploratory data analysis for regional sales and categorical variables. Mult-linear regression modeling followed by feature reduction, model statistical robustness diagnosis, model improvement using spline smoothing and GAM, two-part prediction and performance evaluation using confusion matrix, precision/recall/f1 and MSE.
 
 [Kaggle](https://www.kaggle.com/code/tianyimasf/r-feature-analysis-modeling)
+
 ![image](../Images/32.png)
 ![image](../Images/33.png)
 ![image](../Images/34.png)
