@@ -2,13 +2,13 @@
 
 ---
 
-**All project code is hosted on Kaggle.**
+**All project code are hosted on Kaggle.**
 
 ### Video Game Sales Analysis And Modeling Using R
 
-Paper section in the end of the notebook.
+Paper on findings in the end of the notebook.
 
-Exploratory data analysis for regional sales and categorical variables. Mult-linear regression modeling followed by feature reduction, model statistical robustness diagnosis, model improvement using spline smoothing and GAM, two-part prediction and performance evaluation using confusion matrix, precision/recall/f1 and MSE.
+Exploratory data analysis for regional sales correlation and categorical variables/interaction significance. Feature reduction on baseline model, model diagnosis and improvements. Two-part model to accomdate zero-inflated, power-law-like distribution of North America sales and model performance evaluation.
 
 [Kaggle](https://www.kaggle.com/code/tianyimasf/r-feature-analysis-modeling)
 
