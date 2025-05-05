@@ -14,12 +14,6 @@ I love data science and AI and I'm always reading about them and applying them t
 
 [**Data Science Projects** (click!)](ai-for-good-projects.md)
 
-[**A Mail To Myself**](notebooks/me.md) \| 03/24/2025
-
-[**A Chill Christmas**](notebooks/a_chill_christmas.md) \| 12/28/2024
-
-[**Goodbye, 2024**](notebooks/end_of_year_reflection.md) \| 12/23/2024
-
 ---
 
 ## 🖼️ Pretty Pictures
